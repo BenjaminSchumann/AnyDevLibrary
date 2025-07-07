@@ -1,3 +1,0 @@
-# Exclude the Javadoc directory from Jekyll processing
-exclude:
-  - javadoc/
