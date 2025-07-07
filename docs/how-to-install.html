@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Install - AnyDevLibrary</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .content-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 20px auto;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            color: #555;
+        }
+        pre {
+            background-color: #eee;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        @media (max-width: 600px) {
+            .content-container {
+                padding: 20px;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <a href="./index.html" class="back-link">&larr; Back to Welcome</a>
+
+        <h1>How to Install AnyDevLibrary</h1>
+        <p>Follow these steps to get AnyDevLibrary set up in your projects.</p>
+
+        <h2>1. Download the Library</h2>
+        <p>First, download the latest <code>model.jar</code> file from our <a href="https://github.com/benjaminschumann/AnyDevLibrary/releases" target="_blank">GitHub Releases page</a> (or directly from the repository's root if you've uploaded it there).</p>
+
+        <h2>2. For AnyLogic Models</h2>
+        <ol>
+            <li>Open your AnyLogic model.</li>
+            <li>In the "Projects" view, right-click on your model's name (the top-level item).</li>
+            <li>Select "Properties".</li>
+            <li>Go to the "Dependencies" section.</li>
+            <li>Under "Jar files and class folders required to build the model", click "Add".</li>
+            <li>Choose "Java Archive File (*.jar, *.zip)" and browse to the <code>model.jar</code> file you downloaded.</li>
+            <li>Select "Import to model folder" for easier portability.</li>
+            <li>Click "OK".</li>
+        </ol>
+        <p>Your AnyLogic model can now access the library's classes and agent types.</p>
+
+        <h2>3. For External Java Projects</h2>
+        <p>If you're integrating the library into a standalone Java project (e.g., Maven or Gradle project):</p>
+        <h3>Maven</h3>
+        <p>Add the following dependency to your <code>pom.xml</code>:</p>
+        <pre><code>&lt;dependency&gt;
+&lt;groupId&gt;com.anydev.library&lt;/groupId&gt;
+&lt;artifactId&gt;anydev-library&lt;/artifactId&gt;
+&lt;version&gt;1.0.0&lt;/version&gt; &lt;!-- Replace with your actual version --&gt;
