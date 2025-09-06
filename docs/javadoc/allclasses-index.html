@@ -67,11 +67,37 @@ loadScripts(document, 'script');</script>
 <div class="block">Base custom exception
  Extending RuntimeException makes it an unchecked exception (i.e.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Column.html" title="class in anydev">Column</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
-<div class="block">Define a data column (either for input or output data)  
- Represents the metadata definition of a single column in a dataset, including its name, its canonical ColumnType, and optional information about its original source data type.</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="anydev/Column.html" title="interface in anydev">Column</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Defines all column types that exist.</div>
 </div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Column_Boolean.html" title="class in anydev">Column_Boolean</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Define a column of boolean data (either for input or output data)       
+ Represents the metadata definition of a single column in a dataset (i.e.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Column_Boolean.ColumnBooleanBuilder.html" title="class in anydev">Column_Boolean.ColumnBooleanBuilder</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Column_Date.html" title="class in anydev">Column_Date</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Define a column for date/timestamp entries (either for input or output data).</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Column_Date.ColumnDateBuilder.html" title="class in anydev">Column_Date.ColumnDateBuilder</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Column_Double.html" title="class in anydev">Column_Double</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Define a column of double (or float) data (either for input or output data)     
+ Represents the metadata definition of a single column in a dataset (i.e.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Column_Double.ColumnDoubleBuilder.html" title="class in anydev">Column_Double.ColumnDoubleBuilder</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Column_Enum.html" title="class in anydev">Column_Enum</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Define a column of enum-entries (either for input or output data)       
+ Represents the metadata definition of a single column in a dataset (i.e.</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Column_Enum.ColumnStringBuilder.html" title="class in anydev">Column_Enum.ColumnStringBuilder</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Column_Integer.html" title="class in anydev">Column_Integer</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Define a column of integer data (either for input or output data)       
@@ -79,91 +105,86 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Column_Integer.ColumnIntegerBuilder.html" title="class in anydev">Column_Integer.ColumnIntegerBuilder</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="anydev/Column.ColumnBuilderNameStep.html" title="interface in anydev">Column.ColumnBuilderNameStep</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="anydev/Column.ColumnBuilderTypeStep.html" title="interface in anydev">Column.ColumnBuilderTypeStep</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="anydev/Column.Type.html" title="enum class in anydev">Column.Type</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
-<div class="block">Defines a canonical set of data types that represent common data types
- found in databases, CSV files, and Excel spreadsheets, mapping them to
- standard Java data types.</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Column_String.html" title="class in anydev">Column_String</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Define a column of string data (either for input or output data)        
+ Represents the metadata definition of a single column in a dataset (i.e.</div>
 </div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Column_String.ColumnStringBuilder.html" title="class in anydev">Column_String.ColumnStringBuilder</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="anydev/DataIntegrityException.html" title="class in anydev">DataIntegrityException</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab5">
 <div class="block">Represents an error related to data integrity or unexpected data formats.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Density.html" title="class in anydev">Density</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Density.html" title="class in anydev">Density</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Density: Use to quantify the density of a material (i.e.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="anydev/Density.Density_Unit.html" title="interface in anydev">Density.Density_Unit</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="anydev/Density.Unit.html" title="enum class in anydev">Density.Unit</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab3">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="anydev/Density.Density_Unit.html" title="interface in anydev">Density.Density_Unit</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="anydev/Density.Unit.html" title="enum class in anydev">Density.Unit</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
 <div class="block">units allowed to be used.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab5"><a href="anydev/EnumMissingException.html" title="class in anydev">EnumMissingException</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab5">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="anydev/EnumMissingException.html" title="class in anydev">EnumMissingException</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab5">
 <div class="block">Represents an error where an expected enum value is missing or not handled.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="anydev/GeneralModelException.html" title="class in anydev">GeneralModelException</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab5">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab5"><a href="anydev/GeneralModelException.html" title="class in anydev">GeneralModelException</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab5">
 <div class="block">A general application error that doesn't fit into more specific categories.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="anydev/HyperArrays.html" title="class in anydev">HyperArrays</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="anydev/HyperArrays.html" title="class in anydev">HyperArrays</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Dimensions</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="anydev/IAnyDevException.html" title="interface in anydev">IAnyDevException</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="anydev/IAnyDevException.html" title="interface in anydev">IAnyDevException</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
 <div class="block">Marker interface for all custom AnyDevExceptions
  This allows for easy identification and unified catching of all your model-specific errors.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="anydev/IColumn.html" title="interface in anydev">IColumn</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="anydev/IColumn.Type.html" title="enum class in anydev">IColumn.Type</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab3">
-<div class="block">Define which column types exist.</div>
-</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab5"><a href="anydev/InvalidArgumentException.html" title="class in anydev">InvalidArgumentException</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab5">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab5"><a href="anydev/InvalidArgumentException.html" title="class in anydev">InvalidArgumentException</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab5">
 <div class="block">Represents an error due to an illegal or unexpected argument provided to a method.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="anydev/LogFormatter.html" title="class in anydev">LogFormatter</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Logger.html" title="class in anydev">Logger</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="anydev/LogFormatter.html" title="class in anydev">LogFormatter</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Logger.html" title="class in anydev">Logger</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Logger: Define a log-event by its level, location, and description using a fluent Builder pattern.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="anydev/Logger_BuildStep.html" title="interface in anydev">Logger_BuildStep</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="anydev/Logger_CauseStep.html" title="interface in anydev">Logger_CauseStep</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="anydev/Logger_BuildStep.html" title="interface in anydev">Logger_BuildStep</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="anydev/Logger_LocationStep.html" title="interface in anydev">Logger_LocationStep</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="anydev/Logger_CauseStep.html" title="interface in anydev">Logger_CauseStep</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="anydev/Logger_SolutionStep.html" title="interface in anydev">Logger_SolutionStep</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="anydev/Logger_LocationStep.html" title="interface in anydev">Logger_LocationStep</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="anydev/Logger.Cause.html" title="enum class in anydev">Logger.Cause</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab3">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="anydev/Logger_SolutionStep.html" title="interface in anydev">Logger_SolutionStep</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="anydev/Logger.Cause.html" title="enum class in anydev">Logger.Cause</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
 <div class="block">What can cause log-events.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="anydev/Logger.Level.html" title="enum class in anydev">Logger.Level</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="anydev/Logger.Level.html" title="enum class in anydev">Logger.Level</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab3">
 <div class="block">Logging levels of urgency.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Mass.html" title="class in anydev">Mass</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Mass.html" title="class in anydev">Mass</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Define a specific mass of anything
  NOTE: Internally, the actual value is always stored in TON.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="anydev/Mass.Mass_Unit.html" title="interface in anydev">Mass.Mass_Unit</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="anydev/Mass.Unit.html" title="enum class in anydev">Mass.Unit</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab3">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="anydev/Mass.Mass_Unit.html" title="interface in anydev">Mass.Mass_Unit</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="anydev/Mass.Unit.html" title="enum class in anydev">Mass.Unit</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
 <div class="block">All mass units supported</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Outputs.html" title="class in anydev">Outputs</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Use to define which output data to write, when to write it and where to write it into.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Row.html" title="class in anydev">Row</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
@@ -216,6 +237,12 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="anydev/SC_String.SC_String_Response.html" title="interface in anydev">SC_String.SC_String_Response</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Scenario.html" title="class in anydev">Scenario</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Tracks data and KPIs about a given statechart in prescribed intervals.</div>
+</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Table.html" title="class in anydev">Table</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Defines a data-table, either from an input source or for an output (to ease setup from within the model)</div>
@@ -233,17 +260,23 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">UnitTest: Contains assertions and the ability to <code>runTests(...)</code> for Java classes and agent-types.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Volume.html" title="class in anydev">Volume</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Utils.html" title="class in anydev">Utils</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Utils: A set of minor functions that can be used in various conditions such as:
+ - finding unique elements in a list
+ - prtnting a clean stack trace</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="anydev/Volume.html" title="class in anydev">Volume</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Volume: Use to quantify any volume of anything
  NOTE: Internally, the actual value is always stored in CUBIC_M.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab3"><a href="anydev/Volume.Unit.html" title="enum class in anydev">Volume.Unit</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab3">
+<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="anydev/Volume.Unit.html" title="enum class in anydev">Volume.Unit</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab3">
 <div class="block">units allowed to be used.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="anydev/Volume.Volume_Unit.html" title="interface in anydev">Volume.Volume_Unit</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="anydev/Volume.Volume_Unit.html" title="interface in anydev">Volume.Volume_Unit</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
 </div>
 </div>
 </div>

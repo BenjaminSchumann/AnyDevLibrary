@@ -83,18 +83,12 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="serialized-class-details" id="anydev.DataIntegrityException">
-<h3>Exception&nbsp;<a href="anydev/DataIntegrityException.html" title="class in anydev">anydev.DataIntegrityException</a></h3>
-<div class="type-signature">class DataIntegrityException extends <a href="anydev/AnyDevException.html" title="class in anydev">AnyDevException</a> implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></div>
-</section>
-</li>
-<li>
-<section class="serialized-class-details" id="anydev.DataLoader">
-<h3>Class&nbsp;<a href="anydev/DataLoader.html" title="class in anydev">anydev.DataLoader</a></h3>
-<div class="type-signature">class DataLoader extends com.anylogic.engine.Agent implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></div>
+<section class="serialized-class-details" id="anydev.DataFactory">
+<h3>Class&nbsp;<a href="anydev/DataFactory.html" title="class in anydev">anydev.DataFactory</a></h3>
+<div class="type-signature">class DataFactory extends com.anylogic.engine.Agent implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></div>
 <dl class="name-value">
 <dt>serialVersionUID:</dt>
-<dd>2921148658895921658L</dd>
+<dd>3028821599044667361L</dd>
 </dl>
 <ul class="block-list">
 <li>
@@ -126,15 +120,22 @@ loadScripts(document, 'script');</script>
 <pre>com.anylogic.engine.markup.Level level</pre>
 </li>
 <li class="block-list">
+<h5>p_AutoCheckIntegrity</h5>
+<pre>boolean p_AutoCheckIntegrity</pre>
+<div class="block">Tick to automatically ensure that all selected tables match the *structure* of their model-DB counterpart (same number of columns, same names, same data type)-<br>
+ Throws DataIntegrityException if issues are found<br>
+ Untick to manage yourself (via DataFactory.checkIntegrity(Table))</div>
+</li>
+<li class="block-list">
 <h5>p_AutoLoad</h5>
 <pre>boolean p_AutoLoad</pre>
 <div class="block">Tick to fill selected tables with the actual data from their respective model-DB tables on start.<br>
- Untick to manage yourself (via DataLoader.fillFromModelDB)</div>
+ Untick to manage yourself (via DataFactory.fillFromModelDB)</div>
 </li>
 <li class="block-list">
 <h5>p_Tables</h5>
 <pre><a href="anydev/Table.html" title="class in anydev">Table</a>[] p_Tables</pre>
-<div class="block">Define which tables should be handled by this DataLoader. <br></div>
+<div class="block">Define which tables should be handled by this DataFactory. <br></div>
 </li>
 <li class="block-list">
 <h5>presentation</h5>
@@ -167,6 +168,10 @@ loadScripts(document, 'script');</script>
 <li class="block-list">
 <h5>text_Autoload</h5>
 <pre>com.anylogic.engine.presentation.ShapeText text_Autoload</pre>
+</li>
+<li class="block-list">
+<h5>text_AutoSC</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_AutoSC</pre>
 </li>
 <li class="block-list">
 <h5>text_Description</h5>
@@ -211,6 +216,12 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="serialized-class-details" id="anydev.DataIntegrityException">
+<h3>Exception&nbsp;<a href="anydev/DataIntegrityException.html" title="class in anydev">anydev.DataIntegrityException</a></h3>
+<div class="type-signature">class DataIntegrityException extends <a href="anydev/AnyDevException.html" title="class in anydev">AnyDevException</a> implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></div>
+</section>
+</li>
+<li>
 <section class="serialized-class-details" id="anydev.EnumMissingException">
 <h3>Exception&nbsp;<a href="anydev/EnumMissingException.html" title="class in anydev">anydev.EnumMissingException</a></h3>
 <div class="type-signature">class EnumMissingException extends <a href="anydev/AnyDevException.html" title="class in anydev">AnyDevException</a> implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></div>
@@ -229,6 +240,130 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="serialized-class-details" id="anydev.Outputs">
+<h3>Class&nbsp;<a href="anydev/Outputs.html" title="class in anydev">anydev.Outputs</a></h3>
+<div class="type-signature">class Outputs extends com.anylogic.engine.Agent implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></div>
+<dl class="name-value">
+<dt>serialVersionUID:</dt>
+<dd>766328382364912793L</dd>
+</dl>
+<ul class="block-list">
+<li>
+<section class="detail">
+<h4>Serialized Fields</h4>
+<ul class="block-list">
+<li class="block-list">
+<h5>_getLevels_xjal</h5>
+<pre>com.anylogic.engine.markup.Level[] _getLevels_xjal</pre>
+</li>
+<li class="block-list">
+<h5>connections</h5>
+<pre>com.anylogic.engine.LinkToAgentCollection&lt;com.anylogic.engine.Agent,<wbr>com.anylogic.engine.Agent&gt; connections</pre>
+</li>
+<li class="block-list">
+<h5>gr_SetupElements</h5>
+<pre>com.anylogic.engine.presentation.ShapeGroup gr_SetupElements</pre>
+</li>
+<li class="block-list">
+<h5>icon</h5>
+<pre>com.anylogic.engine.presentation.ShapeModelElementsGroup icon</pre>
+</li>
+<li class="block-list">
+<h5>image</h5>
+<pre>com.anylogic.engine.presentation.ShapeImage image</pre>
+</li>
+<li class="block-list">
+<h5>level</h5>
+<pre>com.anylogic.engine.markup.Level level</pre>
+</li>
+<li class="block-list">
+<h5>p_LogActivity</h5>
+<pre>boolean p_LogActivity</pre>
+<div class="block">Tick to see Logger INFO log entries updating you on all relevant activities, untick to only see WARNINGs or thrown ERRORs</div>
+</li>
+<li class="block-list">
+<h5>p_Moment</h5>
+<pre>int p_Moment</pre>
+<div class="block">Decide when to write outputs:<br>
+ - "Model end": writes when this block is destroyed (NOTE: Not necessarily when the model ends!)<br>
+ - "Manual call": Writes when you call the "write()" function</div>
+</li>
+<li class="block-list">
+<h5>p_Tables</h5>
+<pre><a href="anydev/Table.html" title="class in anydev">Table</a>[] p_Tables</pre>
+<div class="block">Define which tables to write as outputs<br></div>
+</li>
+<li class="block-list">
+<h5>presentation</h5>
+<pre>com.anylogic.engine.presentation.ShapeTopLevelPresentationGroup presentation</pre>
+</li>
+<li class="block-list">
+<h5>rec_FrameAgents</h5>
+<pre>com.anylogic.engine.presentation.ShapeRoundedRectangle rec_FrameAgents</pre>
+</li>
+<li class="block-list">
+<h5>rec_FrameFunctions</h5>
+<pre>com.anylogic.engine.presentation.ShapeRoundedRectangle rec_FrameFunctions</pre>
+</li>
+<li class="block-list">
+<h5>rec_FrameIcon</h5>
+<pre>com.anylogic.engine.presentation.ShapeRoundedRectangle rec_FrameIcon</pre>
+</li>
+<li class="block-list">
+<h5>rec_FrameMain</h5>
+<pre>com.anylogic.engine.presentation.ShapeRoundedRectangle rec_FrameMain</pre>
+</li>
+<li class="block-list">
+<h5>rec_FrameParameters</h5>
+<pre>com.anylogic.engine.presentation.ShapeRoundedRectangle rec_FrameParameters</pre>
+</li>
+<li class="block-list">
+<h5>rec_FrameVariables</h5>
+<pre>com.anylogic.engine.presentation.ShapeRoundedRectangle rec_FrameVariables</pre>
+</li>
+<li class="block-list">
+<h5>text_Description</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Description</pre>
+</li>
+<li class="block-list">
+<h5>text_Frame_Heading</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Frame_Heading</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Agents</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Agents</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Functions</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Functions</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Functions1</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Functions1</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Functions2</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Functions2</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Icon</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Icon</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Parameters</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Parameters</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Variables</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Variables</pre>
+</li>
+</ul>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<li>
 <section class="serialized-class-details" id="anydev.SanityCheckException">
 <h3>Exception&nbsp;<a href="anydev/SanityCheckException.html" title="class in anydev">anydev.SanityCheckException</a></h3>
 <div class="type-signature">class SanityCheckException extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a> implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></div>
@@ -238,6 +373,245 @@ loadScripts(document, 'script');</script>
 <section class="serialized-class-details" id="anydev.SanityCheckFailedException">
 <h3>Exception&nbsp;<a href="anydev/SanityCheckFailedException.html" title="class in anydev">anydev.SanityCheckFailedException</a></h3>
 <div class="type-signature">class SanityCheckFailedException extends <a href="anydev/AnyDevException.html" title="class in anydev">AnyDevException</a> implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></div>
+</section>
+</li>
+<li>
+<section class="serialized-class-details" id="anydev.Scenario">
+<h3>Class&nbsp;<a href="anydev/Scenario.html" title="class in anydev">anydev.Scenario</a></h3>
+<div class="type-signature">class Scenario extends com.anylogic.engine.Agent implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></div>
+<dl class="name-value">
+<dt>serialVersionUID:</dt>
+<dd>2342058391073339940L</dd>
+</dl>
+<ul class="block-list">
+<li>
+<section class="detail">
+<h4>Serialized Fields</h4>
+<ul class="block-list">
+<li class="block-list">
+<h5>_getLevels_xjal</h5>
+<pre>com.anylogic.engine.markup.Level[] _getLevels_xjal</pre>
+</li>
+<li class="block-list">
+<h5>connections</h5>
+<pre>com.anylogic.engine.LinkToAgentCollection&lt;com.anylogic.engine.Agent,<wbr>com.anylogic.engine.Agent&gt; connections</pre>
+</li>
+<li class="block-list">
+<h5>gr_SetupElements</h5>
+<pre>com.anylogic.engine.presentation.ShapeGroup gr_SetupElements</pre>
+</li>
+<li class="block-list">
+<h5>icon</h5>
+<pre>com.anylogic.engine.presentation.ShapeModelElementsGroup icon</pre>
+</li>
+<li class="block-list">
+<h5>im_Icon</h5>
+<pre>com.anylogic.engine.presentation.ShapeImage im_Icon</pre>
+</li>
+<li class="block-list">
+<h5>level</h5>
+<pre>com.anylogic.engine.markup.Level level</pre>
+</li>
+<li class="block-list">
+<h5>p_Tables</h5>
+<pre><a href="anydev/Table.html" title="class in anydev">Table</a>[] p_Tables</pre>
+<div class="block">Define which tables are used for this scenario. This ensures we can output the actual input data that was used for this scenario.<br>
+ You can leave it empty if not important for scenario definition (i.e. you use the same data for all scenario runs anyway)<br></div>
+</li>
+<li class="block-list">
+<h5>presentation</h5>
+<pre>com.anylogic.engine.presentation.ShapeTopLevelPresentationGroup presentation</pre>
+</li>
+<li class="block-list">
+<h5>rec_FrameAgents</h5>
+<pre>com.anylogic.engine.presentation.ShapeRoundedRectangle rec_FrameAgents</pre>
+</li>
+<li class="block-list">
+<h5>rec_FrameFunctions</h5>
+<pre>com.anylogic.engine.presentation.ShapeRoundedRectangle rec_FrameFunctions</pre>
+</li>
+<li class="block-list">
+<h5>rec_FrameIcon</h5>
+<pre>com.anylogic.engine.presentation.ShapeRoundedRectangle rec_FrameIcon</pre>
+</li>
+<li class="block-list">
+<h5>rec_FrameMain</h5>
+<pre>com.anylogic.engine.presentation.ShapeRoundedRectangle rec_FrameMain</pre>
+</li>
+<li class="block-list">
+<h5>rec_FrameParameters</h5>
+<pre>com.anylogic.engine.presentation.ShapeRoundedRectangle rec_FrameParameters</pre>
+</li>
+<li class="block-list">
+<h5>rec_FrameVariables</h5>
+<pre>com.anylogic.engine.presentation.ShapeRoundedRectangle rec_FrameVariables</pre>
+</li>
+<li class="block-list">
+<h5>text_Description</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Description</pre>
+</li>
+<li class="block-list">
+<h5>text_Frame_Heading</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Frame_Heading</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Agents</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Agents</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Functions</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Functions</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Functions1</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Functions1</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Functions2</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Functions2</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Icon</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Icon</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Parameters</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Parameters</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Variables</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Variables</pre>
+</li>
+</ul>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<li>
+<section class="serialized-class-details" id="anydev.StatechartLogger">
+<h3>Class&nbsp;<a href="anydev/StatechartLogger.html" title="class in anydev">anydev.StatechartLogger</a></h3>
+<div class="type-signature">class StatechartLogger extends com.anylogic.engine.Agent implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a></div>
+<dl class="name-value">
+<dt>serialVersionUID:</dt>
+<dd>615446935965897692L</dd>
+</dl>
+<ul class="block-list">
+<li>
+<section class="detail">
+<h4>Serialized Fields</h4>
+<ul class="block-list">
+<li class="block-list">
+<h5>_getLevels_xjal</h5>
+<pre>com.anylogic.engine.markup.Level[] _getLevels_xjal</pre>
+</li>
+<li class="block-list">
+<h5>chart</h5>
+<pre>com.anylogic.engine.analysis.PieChart chart</pre>
+</li>
+<li class="block-list">
+<h5>connections</h5>
+<pre>com.anylogic.engine.LinkToAgentCollection&lt;com.anylogic.engine.Agent,<wbr>com.anylogic.engine.Agent&gt; connections</pre>
+</li>
+<li class="block-list">
+<h5>gr_SetupElements</h5>
+<pre>com.anylogic.engine.presentation.ShapeGroup gr_SetupElements</pre>
+</li>
+<li class="block-list">
+<h5>icon</h5>
+<pre>com.anylogic.engine.presentation.ShapeModelElementsGroup icon</pre>
+</li>
+<li class="block-list">
+<h5>im_Icon</h5>
+<pre>com.anylogic.engine.presentation.ShapeImage im_Icon</pre>
+</li>
+<li class="block-list">
+<h5>level</h5>
+<pre>com.anylogic.engine.markup.Level level</pre>
+</li>
+<li class="block-list">
+<h5>p_AutoLog</h5>
+<pre>boolean p_AutoLog</pre>
+<div class="block">Tick to automatically collect KPIs on the selected states, untick to manually provide data (via <code>logState()</code></div>
+</li>
+<li class="block-list">
+<h5>p_States</h5>
+<pre>com.anylogic.engine.IStatechartState[] p_States</pre>
+<div class="block">Define which statechart states this logger should monitor and track.<br></div>
+</li>
+<li class="block-list">
+<h5>p_UsePieChart</h5>
+<pre>boolean p_UsePieChart</pre>
+<div class="block">Tick to actually animate the associated pie chart of this logger, untick to make it inoperable.<br></div>
+</li>
+<li class="block-list">
+<h5>presentation</h5>
+<pre>com.anylogic.engine.presentation.ShapeTopLevelPresentationGroup presentation</pre>
+</li>
+<li class="block-list">
+<h5>rec_FrameAgents</h5>
+<pre>com.anylogic.engine.presentation.ShapeRoundedRectangle rec_FrameAgents</pre>
+</li>
+<li class="block-list">
+<h5>rec_FrameFunctions</h5>
+<pre>com.anylogic.engine.presentation.ShapeRoundedRectangle rec_FrameFunctions</pre>
+</li>
+<li class="block-list">
+<h5>rec_FrameIcon</h5>
+<pre>com.anylogic.engine.presentation.ShapeRoundedRectangle rec_FrameIcon</pre>
+</li>
+<li class="block-list">
+<h5>rec_FrameMain</h5>
+<pre>com.anylogic.engine.presentation.ShapeRoundedRectangle rec_FrameMain</pre>
+</li>
+<li class="block-list">
+<h5>rec_FrameParameters</h5>
+<pre>com.anylogic.engine.presentation.ShapeRoundedRectangle rec_FrameParameters</pre>
+</li>
+<li class="block-list">
+<h5>rec_FrameVariables</h5>
+<pre>com.anylogic.engine.presentation.ShapeRoundedRectangle rec_FrameVariables</pre>
+</li>
+<li class="block-list">
+<h5>text_Description</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Description</pre>
+</li>
+<li class="block-list">
+<h5>text_Frame_Heading</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Frame_Heading</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Agents</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Agents</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Functions</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Functions</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Functions1</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Functions1</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Functions2</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Functions2</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Icon</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Icon</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Parameters</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Parameters</pre>
+</li>
+<li class="block-list">
+<h5>text_Title_Variables</h5>
+<pre>com.anylogic.engine.presentation.ShapeText text_Title_Variables</pre>
+</li>
+</ul>
+</section>
+</li>
+</ul>
 </section>
 </li>
 <li>

@@ -63,6 +63,11 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Adds given row to the end of this table</div>
 </dd>
+<dt><a href="anydev/Row.html#addRow(java.sql.PreparedStatement)" class="member-name-link">addRow(PreparedStatement)</a> - Method in class anydev.<a href="anydev/Row.html" title="class in anydev">Row</a></dt>
+<dd>
+<div class="block">Actually add all data from this Row to given PreparedStatement
+ Writes each column cell for this record into the correct stmt column (by 1-based index)</div>
+</dd>
 <dt><a href="anydev/Logger.Cause.html#AGENT_COMMS" class="member-name-link">AGENT_COMMS</a> - Enum constant in enum class anydev.<a href="anydev/Logger.Cause.html" title="enum class in anydev">Logger.Cause</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/AgentCommunicationException.html" class="type-name-link" title="class in anydev">AgentCommunicationException</a> - Exception in <a href="anydev/package-summary.html">anydev</a></dt>
@@ -75,17 +80,39 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/AgentCommunicationException.html#%3Cinit%3E(java.lang.String,java.lang.Throwable,anydev.Logger)" class="member-name-link">AgentCommunicationException(String, Throwable, Logger)</a> - Constructor for exception anydev.<a href="anydev/AgentCommunicationException.html" title="class in anydev">AgentCommunicationException</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#agentsInRange(double)" class="member-name-link">agentsInRange(double)</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#agentsInRange(double)" class="member-name-link">agentsInRange(double)</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#agentsInRange(double)" class="member-name-link">agentsInRange(double)</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#agentsInRange(double)" class="member-name-link">agentsInRange(double)</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#agentsInRange(double)" class="member-name-link">agentsInRange(double)</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#agentsInRange(double)" class="member-name-link">agentsInRange(double)</a> - Method in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Boolean.ColumnBooleanBuilder.html#allowsEmpty()" class="member-name-link">allowsEmpty()</a> - Method in class anydev.<a href="anydev/Column_Boolean.ColumnBooleanBuilder.html" title="class in anydev">Column_Boolean.ColumnBooleanBuilder</a></dt>
+<dd>
+<div class="block">Allow cells in this column to be empty</div>
+</dd>
+<dt><a href="anydev/Column_Date.ColumnDateBuilder.html#allowsEmpty()" class="member-name-link">allowsEmpty()</a> - Method in class anydev.<a href="anydev/Column_Date.ColumnDateBuilder.html" title="class in anydev">Column_Date.ColumnDateBuilder</a></dt>
+<dd>
+<div class="block">Allows cells in this column to be empty.</div>
+</dd>
+<dt><a href="anydev/Column_Double.ColumnDoubleBuilder.html#allowsEmpty()" class="member-name-link">allowsEmpty()</a> - Method in class anydev.<a href="anydev/Column_Double.ColumnDoubleBuilder.html" title="class in anydev">Column_Double.ColumnDoubleBuilder</a></dt>
+<dd>
+<div class="block">Allow cells in this column to be empty</div>
+</dd>
+<dt><a href="anydev/Column_Enum.ColumnStringBuilder.html#allowsEmpty()" class="member-name-link">allowsEmpty()</a> - Method in class anydev.<a href="anydev/Column_Enum.ColumnStringBuilder.html" title="class in anydev">Column_Enum.ColumnStringBuilder</a></dt>
+<dd>
+<div class="block">Allow cells in this column to be empty</div>
+</dd>
 <dt><a href="anydev/Column_Integer.ColumnIntegerBuilder.html#allowsEmpty()" class="member-name-link">allowsEmpty()</a> - Method in class anydev.<a href="anydev/Column_Integer.ColumnIntegerBuilder.html" title="class in anydev">Column_Integer.ColumnIntegerBuilder</a></dt>
 <dd>
 <div class="block">Allow cells in this column to be empty</div>
 </dd>
-<dt><a href="anydev/Column_Integer.ColumnIntegerBuilder.html#allowsNull()" class="member-name-link">allowsNull()</a> - Method in class anydev.<a href="anydev/Column_Integer.ColumnIntegerBuilder.html" title="class in anydev">Column_Integer.ColumnIntegerBuilder</a></dt>
+<dt><a href="anydev/Column_String.ColumnStringBuilder.html#allowsEmpty()" class="member-name-link">allowsEmpty()</a> - Method in class anydev.<a href="anydev/Column_String.ColumnStringBuilder.html" title="class in anydev">Column_String.ColumnStringBuilder</a></dt>
 <dd>
-<div class="block">Allows cells in this column to be null.</div>
+<div class="block">Allow cells in this column to be empty</div>
 </dd>
 <dt><a href="anydev/package-summary.html">anydev</a> - package anydev</dt>
 <dd>&nbsp;</dd>
@@ -125,24 +152,6 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:B">B</h2>
 <dl class="index">
-<dt><a href="anydev/Column.Type.html#BLOB" class="member-name-link">BLOB</a> - Enum constant in enum class anydev.<a href="anydev/Column.Type.html" title="enum class in anydev">Column.Type</a></dt>
-<dd>
-<div class="block">Represents binary large objects (e.g., images, files).</div>
-</dd>
-<dt><a href="anydev/IColumn.Type.html#BLOB" class="member-name-link">BLOB</a> - Enum constant in enum class anydev.<a href="anydev/IColumn.Type.html" title="enum class in anydev">IColumn.Type</a></dt>
-<dd>
-<div class="block">Represents binary large objects (e.g., images, files).</div>
-</dd>
-<dt><a href="anydev/Column.Type.html#BOOLEAN" class="member-name-link">BOOLEAN</a> - Enum constant in enum class anydev.<a href="anydev/Column.Type.html" title="enum class in anydev">Column.Type</a></dt>
-<dd>
-<div class="block">Represents boolean values (true/false).</div>
-</dd>
-<dt><a href="anydev/IColumn.Type.html#BOOLEAN" class="member-name-link">BOOLEAN</a> - Enum constant in enum class anydev.<a href="anydev/IColumn.Type.html" title="enum class in anydev">IColumn.Type</a></dt>
-<dd>
-<div class="block">Represents boolean values (true/false).</div>
-</dd>
-<dt><a href="anydev/Column.ColumnBuilderTypeStep.html#build()" class="member-name-link">build()</a> - Method in interface anydev.<a href="anydev/Column.ColumnBuilderTypeStep.html" title="interface in anydev">Column.ColumnBuilderTypeStep</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="anydev/Table.Builder.html#build()" class="member-name-link">build()</a> - Method in class anydev.<a href="anydev/Table.Builder.html" title="class in anydev">Table.Builder</a></dt>
 <dd>
 <div class="block">Create the table.</div>
@@ -154,7 +163,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:C">C</h2>
 <dl class="index">
-<dt><a href="anydev/Column.html#canAdd(java.lang.Object)" class="member-name-link">canAdd(Object)</a> - Method in class anydev.<a href="anydev/Column.html" title="class in anydev">Column</a></dt>
+<dt><a href="anydev/Column_Integer.html#canAdd(java.lang.Object)" class="member-name-link">canAdd(Object)</a> - Method in class anydev.<a href="anydev/Column_Integer.html" title="class in anydev">Column_Integer</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#canYouCallMe()" class="member-name-link">canYouCallMe()</a> - Method in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
@@ -166,11 +175,46 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Logger_CauseStep.html#causedBy(java.lang.String)" class="member-name-link">causedBy(String)</a> - Method in interface anydev.<a href="anydev/Logger_CauseStep.html" title="interface in anydev">Logger_CauseStep</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/Column.html" class="type-name-link" title="class in anydev">Column</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
+<dt><a href="anydev/StatechartLogger.html#chart" class="member-name-link">chart</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#checkIntegrity(anydev.Table)" class="member-name-link">checkIntegrity(Table)</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>
-<div class="block">Define a data column (either for input or output data)  
- Represents the metadata definition of a single column in a dataset, including its name, its canonical ColumnType, and optional information about its original source data type.</div>
+<div class="block">Check if given tableData matches its model-DB equivalent, specifically:<br>
+ - same number of columns<br>
+ - each column has identical name<br>
+ - each column has same data type<br></div>
 </dd>
+<dt><a href="anydev/Column.html" class="type-name-link" title="interface in anydev">Column</a> - Interface in <a href="anydev/package-summary.html">anydev</a></dt>
+<dd>
+<div class="block">Defines all column types that exist.</div>
+</dd>
+<dt><a href="anydev/Column_Boolean.html" class="type-name-link" title="class in anydev">Column_Boolean</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
+<dd>
+<div class="block">Define a column of boolean data (either for input or output data)       
+ Represents the metadata definition of a single column in a dataset (i.e.</div>
+</dd>
+<dt><a href="anydev/Column_Boolean.ColumnBooleanBuilder.html" class="type-name-link" title="class in anydev">Column_Boolean.ColumnBooleanBuilder</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Date.html" class="type-name-link" title="class in anydev">Column_Date</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
+<dd>
+<div class="block">Define a column for date/timestamp entries (either for input or output data).</div>
+</dd>
+<dt><a href="anydev/Column_Date.ColumnDateBuilder.html" class="type-name-link" title="class in anydev">Column_Date.ColumnDateBuilder</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Double.html" class="type-name-link" title="class in anydev">Column_Double</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
+<dd>
+<div class="block">Define a column of double (or float) data (either for input or output data)     
+ Represents the metadata definition of a single column in a dataset (i.e.</div>
+</dd>
+<dt><a href="anydev/Column_Double.ColumnDoubleBuilder.html" class="type-name-link" title="class in anydev">Column_Double.ColumnDoubleBuilder</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Enum.html" class="type-name-link" title="class in anydev">Column_Enum</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
+<dd>
+<div class="block">Define a column of enum-entries (either for input or output data)       
+ Represents the metadata definition of a single column in a dataset (i.e.</div>
+</dd>
+<dt><a href="anydev/Column_Enum.ColumnStringBuilder.html" class="type-name-link" title="class in anydev">Column_Enum.ColumnStringBuilder</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="anydev/Column_Integer.html" class="type-name-link" title="class in anydev">Column_Integer</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
 <dd>
 <div class="block">Define a column of integer data (either for input or output data)       
@@ -178,21 +222,44 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="anydev/Column_Integer.ColumnIntegerBuilder.html" class="type-name-link" title="class in anydev">Column_Integer.ColumnIntegerBuilder</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/Column.ColumnBuilderNameStep.html" class="type-name-link" title="interface in anydev">Column.ColumnBuilderNameStep</a> - Interface in <a href="anydev/package-summary.html">anydev</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="anydev/Column.ColumnBuilderTypeStep.html" class="type-name-link" title="interface in anydev">Column.ColumnBuilderTypeStep</a> - Interface in <a href="anydev/package-summary.html">anydev</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="anydev/Column.Type.html" class="type-name-link" title="enum class in anydev">Column.Type</a> - Enum Class in <a href="anydev/package-summary.html">anydev</a></dt>
+<dt><a href="anydev/Column_String.html" class="type-name-link" title="class in anydev">Column_String</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
 <dd>
-<div class="block">Defines a canonical set of data types that represent common data types
- found in databases, CSV files, and Excel spreadsheets, mapping them to
- standard Java data types.</div>
+<div class="block">Define a column of string data (either for input or output data)        
+ Represents the metadata definition of a single column in a dataset (i.e.</div>
 </dd>
-<dt><a href="anydev/DataLoader.html#connections" class="member-name-link">connections</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Column_String.ColumnStringBuilder.html" class="type-name-link" title="class in anydev">Column_String.ColumnStringBuilder</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#connections" class="member-name-link">connections</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#connections" class="member-name-link">connections</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#connections" class="member-name-link">connections</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#connections" class="member-name-link">connections</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Boolean.ColumnBooleanBuilder.html#create()" class="member-name-link">create()</a> - Method in class anydev.<a href="anydev/Column_Boolean.ColumnBooleanBuilder.html" title="class in anydev">Column_Boolean.ColumnBooleanBuilder</a></dt>
+<dd>
+<div class="block">Creates and returns a new Column_Boolean instance with the configured properties.</div>
+</dd>
+<dt><a href="anydev/Column_Date.ColumnDateBuilder.html#create()" class="member-name-link">create()</a> - Method in class anydev.<a href="anydev/Column_Date.ColumnDateBuilder.html" title="class in anydev">Column_Date.ColumnDateBuilder</a></dt>
+<dd>
+<div class="block">Creates and returns a new Column_Date instance with the configured properties.</div>
+</dd>
+<dt><a href="anydev/Column_Double.ColumnDoubleBuilder.html#create()" class="member-name-link">create()</a> - Method in class anydev.<a href="anydev/Column_Double.ColumnDoubleBuilder.html" title="class in anydev">Column_Double.ColumnDoubleBuilder</a></dt>
+<dd>
+<div class="block">Creates and returns a new Column_Double instance with the configured properties.</div>
+</dd>
+<dt><a href="anydev/Column_Enum.ColumnStringBuilder.html#create()" class="member-name-link">create()</a> - Method in class anydev.<a href="anydev/Column_Enum.ColumnStringBuilder.html" title="class in anydev">Column_Enum.ColumnStringBuilder</a></dt>
+<dd>
+<div class="block">Creates and returns a new Column_Enum instance with the configured properties.</div>
+</dd>
 <dt><a href="anydev/Column_Integer.ColumnIntegerBuilder.html#create()" class="member-name-link">create()</a> - Method in class anydev.<a href="anydev/Column_Integer.ColumnIntegerBuilder.html" title="class in anydev">Column_Integer.ColumnIntegerBuilder</a></dt>
 <dd>
 <div class="block">Creates and returns a new Column_Integer instance with the configured properties.</div>
+</dd>
+<dt><a href="anydev/Column_String.ColumnStringBuilder.html#create()" class="member-name-link">create()</a> - Method in class anydev.<a href="anydev/Column_String.ColumnStringBuilder.html" title="class in anydev">Column_String.ColumnStringBuilder</a></dt>
+<dd>
+<div class="block">Creates and returns a new Column_String instance with the configured properties.</div>
 </dd>
 <dt><a href="anydev/Logger_BuildStep.html#create()" class="member-name-link">create()</a> - Method in interface anydev.<a href="anydev/Logger_BuildStep.html" title="interface in anydev">Logger_BuildStep</a></dt>
 <dd>&nbsp;</dd>
@@ -226,14 +293,22 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Start creating a new Volume</div>
 </dd>
-<dt><a href="anydev/Column.html#create(java.lang.String)" class="member-name-link">create(String)</a> - Static method in class anydev.<a href="anydev/Column.html" title="class in anydev">Column</a></dt>
-<dd>
-<div class="block">Start creating a new Column</div>
-</dd>
+<dt><a href="anydev/Logger_BuildStep.html#create(java.lang.String)" class="member-name-link">create(String)</a> - Method in interface anydev.<a href="anydev/Logger_BuildStep.html" title="interface in anydev">Logger_BuildStep</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Logger_CauseStep.html#create(java.lang.String)" class="member-name-link">create(String)</a> - Method in interface anydev.<a href="anydev/Logger_CauseStep.html" title="interface in anydev">Logger_CauseStep</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Logger_SolutionStep.html#create(java.lang.String)" class="member-name-link">create(String)</a> - Method in interface anydev.<a href="anydev/Logger_SolutionStep.html" title="interface in anydev">Logger_SolutionStep</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="anydev/Table.html#create(java.lang.String)" class="member-name-link">create(String)</a> - Static method in class anydev.<a href="anydev/Table.html" title="class in anydev">Table</a></dt>
 <dd>
 <div class="block">Start the creation of a new Table object with the given name.</div>
 </dd>
+<dt><a href="anydev/Logger_BuildStep.html#create(java.lang.String,double)" class="member-name-link">create(String, double)</a> - Method in interface anydev.<a href="anydev/Logger_BuildStep.html" title="interface in anydev">Logger_BuildStep</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Logger_CauseStep.html#create(java.lang.String,double)" class="member-name-link">create(String, double)</a> - Method in interface anydev.<a href="anydev/Logger_CauseStep.html" title="interface in anydev">Logger_CauseStep</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Logger_SolutionStep.html#create(java.lang.String,double)" class="member-name-link">create(String, double)</a> - Method in interface anydev.<a href="anydev/Logger_SolutionStep.html" title="interface in anydev">Logger_SolutionStep</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="anydev/Row.html#createFullRow(java.util.LinkedHashMap,anydev.Table)" class="member-name-link">createFullRow(LinkedHashMap&lt;Column, Object&gt;, Table)</a> - Static method in class anydev.<a href="anydev/Row.html" title="class in anydev">Row</a></dt>
 <dd>
 <div class="block">Create a fully-formed Row by providing all data upfront
@@ -246,7 +321,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="anydev/RunConfiguration.html#createRootAgent(com.anylogic.engine.Engine)" class="member-name-link">createRootAgent(Engine)</a> - Method in class anydev.<a href="anydev/RunConfiguration.html" title="class in anydev">RunConfiguration</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#createTable(anydev.Table)" class="member-name-link">createTable(Table)</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#createTable(anydev.Table)" class="member-name-link">createTable(Table)</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>
 <div class="block">For given Table, actually recreate it as a clean, SQL DB table in your model DB<br>
  Use this to clean up any accidental data overwrites or update the model-DB schema with your static definitions<br></div>
@@ -260,6 +335,20 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="anydev/Logger.Cause.html#DATA_ISSUE" class="member-name-link">DATA_ISSUE</a> - Enum constant in enum class anydev.<a href="anydev/Logger.Cause.html" title="enum class in anydev">Logger.Cause</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html" class="type-name-link" title="class in anydev">DataFactory</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#%3Cinit%3E()" class="member-name-link">DataFactory()</a> - Constructor for class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>
+<div class="block">Simple constructor.</div>
+</dd>
+<dt><a href="anydev/DataFactory.html#%3Cinit%3E(anydev.Table%5B%5D,boolean,boolean)" class="member-name-link">DataFactory(Table[], boolean, boolean)</a> - Constructor for class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>
+<div class="block">Simple constructor.</div>
+</dd>
+<dt><a href="anydev/DataFactory.html#%3Cinit%3E(com.anylogic.engine.Engine,com.anylogic.engine.Agent,com.anylogic.engine.AgentList)" class="member-name-link">DataFactory(Engine, Agent, AgentList&lt;? extends DataFactory&gt;)</a> - Constructor for class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>
+<div class="block">Constructor</div>
+</dd>
 <dt><a href="anydev/DataIntegrityException.html" class="type-name-link" title="class in anydev">DataIntegrityException</a> - Exception in <a href="anydev/package-summary.html">anydev</a></dt>
 <dd>
 <div class="block">Represents an error related to data integrity or unexpected data formats.</div>
@@ -270,36 +359,6 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/DataIntegrityException.html#%3Cinit%3E(java.lang.String,java.lang.Throwable,anydev.Logger)" class="member-name-link">DataIntegrityException(String, Throwable, Logger)</a> - Constructor for exception anydev.<a href="anydev/DataIntegrityException.html" title="class in anydev">DataIntegrityException</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html" class="type-name-link" title="class in anydev">DataLoader</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#%3Cinit%3E()" class="member-name-link">DataLoader()</a> - Constructor for class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
-<dd>
-<div class="block">Simple constructor.</div>
-</dd>
-<dt><a href="anydev/DataLoader.html#%3Cinit%3E(anydev.Table%5B%5D,boolean)" class="member-name-link">DataLoader(Table[], boolean)</a> - Constructor for class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
-<dd>
-<div class="block">Simple constructor.</div>
-</dd>
-<dt><a href="anydev/DataLoader.html#%3Cinit%3E(com.anylogic.engine.Engine,com.anylogic.engine.Agent,com.anylogic.engine.AgentList)" class="member-name-link">DataLoader(Engine, Agent, AgentList&lt;? extends DataLoader&gt;)</a> - Constructor for class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
-<dd>
-<div class="block">Constructor</div>
-</dd>
-<dt><a href="anydev/Column.Type.html#DATE" class="member-name-link">DATE</a> - Enum constant in enum class anydev.<a href="anydev/Column.Type.html" title="enum class in anydev">Column.Type</a></dt>
-<dd>
-<div class="block">Represents date values (year, month, day).</div>
-</dd>
-<dt><a href="anydev/IColumn.Type.html#DATE" class="member-name-link">DATE</a> - Enum constant in enum class anydev.<a href="anydev/IColumn.Type.html" title="enum class in anydev">IColumn.Type</a></dt>
-<dd>
-<div class="block">Represents date values (year, month, day).</div>
-</dd>
-<dt><a href="anydev/Column.Type.html#DATETIME" class="member-name-link">DATETIME</a> - Enum constant in enum class anydev.<a href="anydev/Column.Type.html" title="enum class in anydev">Column.Type</a></dt>
-<dd>
-<div class="block">Represents date and time values.</div>
-</dd>
-<dt><a href="anydev/IColumn.Type.html#DATETIME" class="member-name-link">DATETIME</a> - Enum constant in enum class anydev.<a href="anydev/IColumn.Type.html" title="enum class in anydev">IColumn.Type</a></dt>
-<dd>
-<div class="block">Represents date and time values.</div>
-</dd>
 <dt><a href="anydev/Density.html" class="type-name-link" title="class in anydev">Density</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
 <dd>
 <div class="block">Density: Use to quantify the density of a material (i.e.</div>
@@ -316,27 +375,37 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Volume.Unit.html#description" class="member-name-link">description</a> - Variable in enum class anydev.<a href="anydev/Volume.Unit.html" title="enum class in anydev">Volume.Unit</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#destroyTable(anydev.Table)" class="member-name-link">destroyTable(Table)</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#destroyTable(anydev.Table)" class="member-name-link">destroyTable(Table)</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>
 <div class="block">Use to describe all table columns as a separate "readme" table<br></div>
 </dd>
-<dt><a href="anydev/DataLoader.html#doCreate()" class="member-name-link">doCreate()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#doCreate()" class="member-name-link">doCreate()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#doCreate()" class="member-name-link">doCreate()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#doCreate()" class="member-name-link">doCreate()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#doCreate()" class="member-name-link">doCreate()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#doCreate()" class="member-name-link">doCreate()</a> - Method in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#doStart()" class="member-name-link">doStart()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#doStart()" class="member-name-link">doStart()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#doStart()" class="member-name-link">doStart()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#doStart()" class="member-name-link">doStart()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#doStart()" class="member-name-link">doStart()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#doStart()" class="member-name-link">doStart()</a> - Method in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/Column.Type.html#DOUBLE" class="member-name-link">DOUBLE</a> - Enum constant in enum class anydev.<a href="anydev/Column.Type.html" title="enum class in anydev">Column.Type</a></dt>
-<dd>
-<div class="block">Represents floating-point numbers.</div>
-</dd>
-<dt><a href="anydev/IColumn.Type.html#DOUBLE" class="member-name-link">DOUBLE</a> - Enum constant in enum class anydev.<a href="anydev/IColumn.Type.html" title="enum class in anydev">IColumn.Type</a></dt>
-<dd>
-<div class="block">Represents floating-point numbers.</div>
-</dd>
-<dt><a href="anydev/DataLoader.html#drawLinksToAgents(boolean,com.anylogic.engine.presentation.LinkToAgentAnimator)" class="member-name-link">drawLinksToAgents(boolean, LinkToAgentAnimator)</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#drawLinksToAgents(boolean,com.anylogic.engine.presentation.LinkToAgentAnimator)" class="member-name-link">drawLinksToAgents(boolean, LinkToAgentAnimator)</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#drawLinksToAgents(boolean,com.anylogic.engine.presentation.LinkToAgentAnimator)" class="member-name-link">drawLinksToAgents(boolean, LinkToAgentAnimator)</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#drawLinksToAgents(boolean,com.anylogic.engine.presentation.LinkToAgentAnimator)" class="member-name-link">drawLinksToAgents(boolean, LinkToAgentAnimator)</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#drawLinksToAgents(boolean,com.anylogic.engine.presentation.LinkToAgentAnimator)" class="member-name-link">drawLinksToAgents(boolean, LinkToAgentAnimator)</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:E">E</h2>
@@ -389,30 +458,88 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/EnumMissingException.html#%3Cinit%3E(java.lang.String,java.lang.Throwable,anydev.Logger)" class="member-name-link">EnumMissingException(String, Throwable, Logger)</a> - Constructor for exception anydev.<a href="anydev/EnumMissingException.html" title="class in anydev">EnumMissingException</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Boolean.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class anydev.<a href="anydev/Column_Boolean.html" title="class in anydev">Column_Boolean</a></dt>
+<dd>
+<div class="block">Overrides the default equals method to provide a deep comparison of Column_Boolean objects.</div>
+</dd>
+<dt><a href="anydev/Column_Date.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class anydev.<a href="anydev/Column_Date.html" title="class in anydev">Column_Date</a></dt>
+<dd>
+<div class="block">Overrides the default equals method to provide a deep comparison of Column_Date objects.</div>
+</dd>
+<dt><a href="anydev/Column_Double.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class anydev.<a href="anydev/Column_Double.html" title="class in anydev">Column_Double</a></dt>
+<dd>
+<div class="block">Overrides the default equals method to provide a deep comparison of Column_Double objects.</div>
+</dd>
+<dt><a href="anydev/Column_Enum.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class anydev.<a href="anydev/Column_Enum.html" title="class in anydev">Column_Enum</a></dt>
+<dd>
+<div class="block">Overrides the default equals method to provide a deep comparison of Column_Enum objects.</div>
+</dd>
 <dt><a href="anydev/Column_Integer.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class anydev.<a href="anydev/Column_Integer.html" title="class in anydev">Column_Integer</a></dt>
 <dd>
 <div class="block">Overrides the default equals method to provide a deep comparison of Column_Integer objects.</div>
 </dd>
-<dt><a href="anydev/Column.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class anydev.<a href="anydev/Column.html" title="class in anydev">Column</a></dt>
+<dt><a href="anydev/Column_String.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class anydev.<a href="anydev/Column_String.html" title="class in anydev">Column_String</a></dt>
 <dd>
-<div class="block">Overrides the default equals method to provide a deep comparison of Column objects.</div>
+<div class="block">Overrides the default equals method to provide a deep comparison of Column_String objects.</div>
 </dd>
+<dt><a href="anydev/SC_String.Builder.html#equals(java.lang.String)" class="member-name-link">equals(String)</a> - Method in class anydev.<a href="anydev/SC_String.Builder.html" title="class in anydev">SC_String.Builder</a></dt>
+<dd>
+<div class="block">Checks that the string value is equal to given value</div>
+</dd>
+<dt><a href="anydev/SC_String.SC_String_Condition.html#equals(java.lang.String)" class="member-name-link">equals(String)</a> - Method in interface anydev.<a href="anydev/SC_String.SC_String_Condition.html" title="interface in anydev">SC_String.SC_String_Condition</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="anydev/Logger.Level.html#ERROR" class="member-name-link">ERROR</a> - Enum constant in enum class anydev.<a href="anydev/Logger.Level.html" title="enum class in anydev">Logger.Level</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:F">F</h2>
 <dl class="index">
-<dt><a href="anydev/DataLoader.html#fillFromModelDB(anydev.Table)" class="member-name-link">fillFromModelDB(Table)</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#fillFromModelDB(anydev.Table)" class="member-name-link">fillFromModelDB(Table)</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>
 <div class="block">Fill given table-object with data from the associated model-DB data table.<br>
  Will loop through all rows of given table in respective model-DB and add row-data entries to given table<br></div>
 </dd>
-<dt><a href="anydev/IColumn.html#forInteger(java.lang.String)" class="member-name-link">forInteger(String)</a> - Static method in interface anydev.<a href="anydev/IColumn.html" title="interface in anydev">IColumn</a></dt>
+<dt><a href="anydev/Utils.html#findUnique(java.util.List,java.util.function.Predicate,boolean)" class="member-name-link">findUnique(List&lt;T&gt;, Predicate&lt;T&gt;, boolean)</a> - Static method in class anydev.<a href="anydev/Utils.html" title="class in anydev">Utils</a></dt>
+<dd>
+<div class="block">Try to find a unique element from given inList that matches given withCondition
+ Allows easy flagging if finding no entry or several entries.</div>
+</dd>
+<dt><a href="anydev/Column.html#forBoolean(java.lang.String)" class="member-name-link">forBoolean(String)</a> - Static method in interface anydev.<a href="anydev/Column.html" title="interface in anydev">Column</a></dt>
+<dd>
+<div class="block">Start creating a new Boolean-column</div>
+</dd>
+<dt><a href="anydev/Column.html#forDate(java.lang.String)" class="member-name-link">forDate(String)</a> - Static method in interface anydev.<a href="anydev/Column.html" title="interface in anydev">Column</a></dt>
+<dd>
+<div class="block">Start creating a new Date-column</div>
+</dd>
+<dt><a href="anydev/Column.html#forDouble(java.lang.String)" class="member-name-link">forDouble(String)</a> - Static method in interface anydev.<a href="anydev/Column.html" title="interface in anydev">Column</a></dt>
+<dd>
+<div class="block">Start creating a new Double-column</div>
+</dd>
+<dt><a href="anydev/Column.html#forEnum(java.lang.String,java.lang.Class)" class="member-name-link">forEnum(String, Class&lt;? extends Enum&gt;)</a> - Static method in interface anydev.<a href="anydev/Column.html" title="interface in anydev">Column</a></dt>
+<dd>
+<div class="block">Start creating a new Enum-column</div>
+</dd>
+<dt><a href="anydev/Column.html#forInteger(java.lang.String)" class="member-name-link">forInteger(String)</a> - Static method in interface anydev.<a href="anydev/Column.html" title="interface in anydev">Column</a></dt>
 <dd>
 <div class="block">Start creating a new Integer-column</div>
 </dd>
-<dt><a href="anydev/Column.ColumnBuilderTypeStep.html#from(java.lang.String)" class="member-name-link">from(String)</a> - Method in interface anydev.<a href="anydev/Column.ColumnBuilderTypeStep.html" title="interface in anydev">Column.ColumnBuilderTypeStep</a></dt>
-<dd>&nbsp;</dd>
+<dt><a href="anydev/LogFormatter.html#formatForPopup(anydev.Logger)" class="member-name-link">formatForPopup(Logger)</a> - Static method in class anydev.<a href="anydev/LogFormatter.html" title="class in anydev">LogFormatter</a></dt>
+<dd>
+<div class="block">Returns a nicely formatted string for a given Logger instance that prints nicely into a model popup window (i.e.</div>
+</dd>
+<dt><a href="anydev/LogFormatter.html#formatMultiLine(anydev.Logger)" class="member-name-link">formatMultiLine(Logger)</a> - Static method in class anydev.<a href="anydev/LogFormatter.html" title="class in anydev">LogFormatter</a></dt>
+<dd>
+<div class="block">Returns a nicely formatted string for a given Logger instance printed across several lines (using predefined indentations)
+ Each line defines a specific logger field (time, cause, solution...)</div>
+</dd>
+<dt><a href="anydev/LogFormatter.html#formatSingleLine(anydev.Logger)" class="member-name-link">formatSingleLine(Logger)</a> - Static method in class anydev.<a href="anydev/LogFormatter.html" title="class in anydev">LogFormatter</a></dt>
+<dd>
+<div class="block">Returns a nicely formatted string for a given Logger instance printed across one line only (using predefined indentations)</div>
+</dd>
+<dt><a href="anydev/Column.html#forString(java.lang.String)" class="member-name-link">forString(String)</a> - Static method in interface anydev.<a href="anydev/Column.html" title="interface in anydev">Column</a></dt>
+<dd>
+<div class="block">Start creating a new String-column</div>
+</dd>
 </dl>
 <h2 class="title" id="I:G">G</h2>
 <dl class="index">
@@ -428,11 +555,6 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Row.html#get(anydev.Column)" class="member-name-link">get(Column)</a> - Method in class anydev.<a href="anydev/Row.html" title="class in anydev">Row</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/LogFormatter.html#getAsFormattedString(anydev.Logger)" class="member-name-link">getAsFormattedString(Logger)</a> - Static method in class anydev.<a href="anydev/LogFormatter.html" title="class in anydev">LogFormatter</a></dt>
-<dd>
-<div class="block">Returns a nicely formatted string for a given Logger instance,
- using predefined internal column widths, alignment, and rounding.</div>
-</dd>
 <dt><a href="anydev/Volume.html#getAsMass(anydev.Density)" class="member-name-link">getAsMass(Density)</a> - Method in class anydev.<a href="anydev/Volume.html" title="class in anydev">Volume</a></dt>
 <dd>
 <div class="block">Convert this volume into a mass</div>
@@ -442,6 +564,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Convert this mass into a volume</div>
 </dd>
 <dt><a href="anydev/Row.html#getBoolean(anydev.Column)" class="member-name-link">getBoolean(Column)</a> - Method in class anydev.<a href="anydev/Row.html" title="class in anydev">Row</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/LogFormatter.html#getBreakLine()" class="member-name-link">getBreakLine()</a> - Static method in class anydev.<a href="anydev/LogFormatter.html" title="class in anydev">LogFormatter</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Logger.html#getCause()" class="member-name-link">getCause()</a> - Method in class anydev.<a href="anydev/Logger.html" title="class in anydev">Logger</a></dt>
 <dd>&nbsp;</dd>
@@ -469,13 +593,39 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="anydev/Table.html#getData()" class="member-name-link">getData()</a> - Method in class anydev.<a href="anydev/Table.html" title="class in anydev">Table</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="anydev/Row.html#getDate(anydev.Column)" class="member-name-link">getDate(Column)</a> - Method in class anydev.<a href="anydev/Row.html" title="class in anydev">Row</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Boolean.html#getDefaultValue()" class="member-name-link">getDefaultValue()</a> - Method in class anydev.<a href="anydev/Column_Boolean.html" title="class in anydev">Column_Boolean</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Date.html#getDefaultValue()" class="member-name-link">getDefaultValue()</a> - Method in class anydev.<a href="anydev/Column_Date.html" title="class in anydev">Column_Date</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Double.html#getDefaultValue()" class="member-name-link">getDefaultValue()</a> - Method in class anydev.<a href="anydev/Column_Double.html" title="class in anydev">Column_Double</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Enum.html#getDefaultValue()" class="member-name-link">getDefaultValue()</a> - Method in class anydev.<a href="anydev/Column_Enum.html" title="class in anydev">Column_Enum</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="anydev/Column_Integer.html#getDefaultValue()" class="member-name-link">getDefaultValue()</a> - Method in class anydev.<a href="anydev/Column_Integer.html" title="class in anydev">Column_Integer</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_String.html#getDefaultValue()" class="member-name-link">getDefaultValue()</a> - Method in class anydev.<a href="anydev/Column_String.html" title="class in anydev">Column_String</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column.html#getDefaultValue()" class="member-name-link">getDefaultValue()</a> - Method in interface anydev.<a href="anydev/Column.html" title="interface in anydev">Column</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Density.html#getDensity(anydev.Density.Unit)" class="member-name-link">getDensity(Density.Unit)</a> - Method in class anydev.<a href="anydev/Density.html" title="class in anydev">Density</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#getElementDesciptors()" class="member-name-link">getElementDesciptors()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Row.html#getDouble(anydev.Column)" class="member-name-link">getDouble(Column)</a> - Method in class anydev.<a href="anydev/Row.html" title="class in anydev">Row</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#getElementDesciptors()" class="member-name-link">getElementDesciptors()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#getElementDesciptors()" class="member-name-link">getElementDesciptors()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#getElementDesciptors()" class="member-name-link">getElementDesciptors()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#getElementDesciptors()" class="member-name-link">getElementDesciptors()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#getElementDesciptors()" class="member-name-link">getElementDesciptors()</a> - Method in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Row.html#getEnum(anydev.Column)" class="member-name-link">getEnum(Column)</a> - Method in class anydev.<a href="anydev/Row.html" title="class in anydev">Row</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Enum.html#getEnumType()" class="member-name-link">getEnumType()</a> - Method in class anydev.<a href="anydev/Column_Enum.html" title="class in anydev">Column_Enum</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/AnyDevException.html#getErrorCode()" class="member-name-link">getErrorCode()</a> - Method in exception anydev.<a href="anydev/AnyDevException.html" title="class in anydev">AnyDevException</a></dt>
 <dd>&nbsp;</dd>
@@ -483,20 +633,27 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns a specific, structured error code for this error.</div>
 </dd>
-<dt><a href="anydev/LogFormatter.html#getHeaderLine()" class="member-name-link">getHeaderLine()</a> - Static method in class anydev.<a href="anydev/LogFormatter.html" title="class in anydev">LogFormatter</a></dt>
-<dd>
-<div class="block">Returns a formatted header string for the log event table,
- using predefined internal column widths.</div>
-</dd>
 <dt><a href="anydev/Row.html#getInt(anydev.Column)" class="member-name-link">getInt(Column)</a> - Method in class anydev.<a href="anydev/Row.html" title="class in anydev">Row</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Logger.html#getLevel()" class="member-name-link">getLevel()</a> - Method in class anydev.<a href="anydev/Logger.html" title="class in anydev">Logger</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#getLevels()" class="member-name-link">getLevels()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#getLevels()" class="member-name-link">getLevels()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#getLevels()" class="member-name-link">getLevels()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#getLevels()" class="member-name-link">getLevels()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#getLevels()" class="member-name-link">getLevels()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#getLevels()" class="member-name-link">getLevels()</a> - Method in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#getLinkToAgentStandard_xjal()" class="member-name-link">getLinkToAgentStandard_xjal()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#getLinkToAgentStandard_xjal()" class="member-name-link">getLinkToAgentStandard_xjal()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#getLinkToAgentStandard_xjal()" class="member-name-link">getLinkToAgentStandard_xjal()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#getLinkToAgentStandard_xjal()" class="member-name-link">getLinkToAgentStandard_xjal()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#getLinkToAgentStandard_xjal()" class="member-name-link">getLinkToAgentStandard_xjal()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/AnyDevException.html#getLogger()" class="member-name-link">getLogger()</a> - Method in exception anydev.<a href="anydev/AnyDevException.html" title="class in anydev">AnyDevException</a></dt>
 <dd>&nbsp;</dd>
@@ -508,47 +665,99 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Mass.html#getMass(anydev.Mass.Unit)" class="member-name-link">getMass(Mass.Unit)</a> - Method in class anydev.<a href="anydev/Mass.html" title="class in anydev">Mass</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Double.html#getMaxValue()" class="member-name-link">getMaxValue()</a> - Method in class anydev.<a href="anydev/Column_Double.html" title="class in anydev">Column_Double</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="anydev/Column_Integer.html#getMaxValue()" class="member-name-link">getMaxValue()</a> - Method in class anydev.<a href="anydev/Column_Integer.html" title="class in anydev">Column_Integer</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Double.html#getMinValue()" class="member-name-link">getMinValue()</a> - Method in class anydev.<a href="anydev/Column_Double.html" title="class in anydev">Column_Double</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Column_Integer.html#getMinValue()" class="member-name-link">getMinValue()</a> - Method in class anydev.<a href="anydev/Column_Integer.html" title="class in anydev">Column_Integer</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#getModelElementsShape()" class="member-name-link">getModelElementsShape()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#getModelElementsShape()" class="member-name-link">getModelElementsShape()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#getModelElementsShape()" class="member-name-link">getModelElementsShape()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#getModelElementsShape()" class="member-name-link">getModelElementsShape()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#getModelElementsShape()" class="member-name-link">getModelElementsShape()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#getModelElementsShape()" class="member-name-link">getModelElementsShape()</a> - Method in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="anydev/Logger.html#getMsg()" class="member-name-link">getMsg()</a> - Method in class anydev.<a href="anydev/Logger.html" title="class in anydev">Logger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Boolean.html#getName()" class="member-name-link">getName()</a> - Method in class anydev.<a href="anydev/Column_Boolean.html" title="class in anydev">Column_Boolean</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Date.html#getName()" class="member-name-link">getName()</a> - Method in class anydev.<a href="anydev/Column_Date.html" title="class in anydev">Column_Date</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Double.html#getName()" class="member-name-link">getName()</a> - Method in class anydev.<a href="anydev/Column_Double.html" title="class in anydev">Column_Double</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Enum.html#getName()" class="member-name-link">getName()</a> - Method in class anydev.<a href="anydev/Column_Enum.html" title="class in anydev">Column_Enum</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="anydev/Column_Integer.html#getName()" class="member-name-link">getName()</a> - Method in class anydev.<a href="anydev/Column_Integer.html" title="class in anydev">Column_Integer</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/Column.html#getName()" class="member-name-link">getName()</a> - Method in class anydev.<a href="anydev/Column.html" title="class in anydev">Column</a></dt>
+<dt><a href="anydev/Column_String.html#getName()" class="member-name-link">getName()</a> - Method in class anydev.<a href="anydev/Column_String.html" title="class in anydev">Column_String</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/IColumn.html#getName()" class="member-name-link">getName()</a> - Method in interface anydev.<a href="anydev/IColumn.html" title="interface in anydev">IColumn</a></dt>
+<dt><a href="anydev/Column.html#getName()" class="member-name-link">getName()</a> - Method in interface anydev.<a href="anydev/Column.html" title="interface in anydev">Column</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Table.html#getName()" class="member-name-link">getName()</a> - Method in class anydev.<a href="anydev/Table.html" title="class in anydev">Table</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/Column.html#getOriginalSourceType()" class="member-name-link">getOriginalSourceType()</a> - Method in class anydev.<a href="anydev/Column.html" title="class in anydev">Column</a></dt>
-<dd>
-<div class="block">Gets the original source-specific data type string if available.</div>
-</dd>
+<dt><a href="anydev/Column.html#getObjectToAdd(java.lang.Object)" class="member-name-link">getObjectToAdd(Object)</a> - Method in interface anydev.<a href="anydev/Column.html" title="interface in anydev">Column</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="anydev/RunConfiguration.html#getOutputValues(anydev.TestLibraryBlock,com.anylogic.engine.IRunOutputsConsumer)" class="member-name-link">getOutputValues(TestLibraryBlock, IRunOutputsConsumer)</a> - Method in class anydev.<a href="anydev/RunConfiguration.html" title="class in anydev">RunConfiguration</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#getParameter(java.lang.String)" class="member-name-link">getParameter(String)</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#getParameter(java.lang.String)" class="member-name-link">getParameter(String)</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#getParameterNames()" class="member-name-link">getParameterNames()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#getParameter(java.lang.String)" class="member-name-link">getParameter(String)</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#getPopulation()" class="member-name-link">getPopulation()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Scenario.html#getParameter(java.lang.String)" class="member-name-link">getParameter(String)</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#getParameter(java.lang.String)" class="member-name-link">getParameter(String)</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#getParameterNames()" class="member-name-link">getParameterNames()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#getParameterNames()" class="member-name-link">getParameterNames()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#getParameterNames()" class="member-name-link">getParameterNames()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#getParameterNames()" class="member-name-link">getParameterNames()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#getPieChart()" class="member-name-link">getPieChart()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#getPopulation()" class="member-name-link">getPopulation()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#getPopulation()" class="member-name-link">getPopulation()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#getPopulation()" class="member-name-link">getPopulation()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#getPopulation()" class="member-name-link">getPopulation()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#getPopulation()" class="member-name-link">getPopulation()</a> - Method in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#getPresentationShape()" class="member-name-link">getPresentationShape()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#getPresentationShape()" class="member-name-link">getPresentationShape()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#getPresentationShape()" class="member-name-link">getPresentationShape()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#getPresentationShape()" class="member-name-link">getPresentationShape()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#getPresentationShape()" class="member-name-link">getPresentationShape()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#getPresentationShape()" class="member-name-link">getPresentationShape()</a> - Method in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#getScale()" class="member-name-link">getScale()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#getScale()" class="member-name-link">getScale()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/LogFormatter.html#getSeparatorLine()" class="member-name-link">getSeparatorLine()</a> - Static method in class anydev.<a href="anydev/LogFormatter.html" title="class in anydev">LogFormatter</a></dt>
-<dd>
-<div class="block">Helper method to generate a separator line based on the total width of the columns.</div>
-</dd>
+<dt><a href="anydev/Outputs.html#getScale()" class="member-name-link">getScale()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#getScale()" class="member-name-link">getScale()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#getScale()" class="member-name-link">getScale()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="anydev/Logger.html#getSource()" class="member-name-link">getSource()</a> - Method in class anydev.<a href="anydev/Logger.html" title="class in anydev">Logger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Utils.html#getStackTrace()" class="member-name-link">getStackTrace()</a> - Static method in class anydev.<a href="anydev/Utils.html" title="class in anydev">Utils</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#getState(java.lang.String)" class="member-name-link">getState(String)</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#getStates()" class="member-name-link">getStates()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#getStaticVal()" class="member-name-link">getStaticVal()</a> - Method in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
@@ -560,40 +769,66 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Row.html#getTable()" class="member-name-link">getTable()</a> - Method in class anydev.<a href="anydev/Row.html" title="class in anydev">Row</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#getTableData(java.lang.String)" class="member-name-link">getTableData(String)</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#getTable(java.lang.String)" class="member-name-link">getTable(String)</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#getTablesData()" class="member-name-link">getTablesData()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#getTableData(java.lang.String)" class="member-name-link">getTableData(String)</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#getTableData(java.lang.String)" class="member-name-link">getTableData(String)</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#getTables()" class="member-name-link">getTables()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#getTablesData()" class="member-name-link">getTablesData()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#getTablesData()" class="member-name-link">getTablesData()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Boolean.html#getType()" class="member-name-link">getType()</a> - Method in class anydev.<a href="anydev/Column_Boolean.html" title="class in anydev">Column_Boolean</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Date.html#getType()" class="member-name-link">getType()</a> - Method in class anydev.<a href="anydev/Column_Date.html" title="class in anydev">Column_Date</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Double.html#getType()" class="member-name-link">getType()</a> - Method in class anydev.<a href="anydev/Column_Double.html" title="class in anydev">Column_Double</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Enum.html#getType()" class="member-name-link">getType()</a> - Method in class anydev.<a href="anydev/Column_Enum.html" title="class in anydev">Column_Enum</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Column_Integer.html#getType()" class="member-name-link">getType()</a> - Method in class anydev.<a href="anydev/Column_Integer.html" title="class in anydev">Column_Integer</a></dt>
-<dd>
-<div class="block">Gets the explicit canonical (data-)Type of this column.</div>
-</dd>
-<dt><a href="anydev/Column.html#getType()" class="member-name-link">getType()</a> - Method in class anydev.<a href="anydev/Column.html" title="class in anydev">Column</a></dt>
-<dd>
-<div class="block">Gets the explicit canonical (data-)Type of this column.</div>
-</dd>
-<dt><a href="anydev/IColumn.html#getType()" class="member-name-link">getType()</a> - Method in interface anydev.<a href="anydev/IColumn.html" title="interface in anydev">IColumn</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/Column.html#getType(java.lang.Object)" class="member-name-link">getType(Object)</a> - Static method in class anydev.<a href="anydev/Column.html" title="class in anydev">Column</a></dt>
-<dd>
-<div class="block">Attempts to infer a Column.Type from a given Java object.</div>
-</dd>
+<dt><a href="anydev/Column_String.html#getType()" class="member-name-link">getType()</a> - Method in class anydev.<a href="anydev/Column_String.html" title="class in anydev">Column_String</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column.html#getType()" class="member-name-link">getType()</a> - Method in interface anydev.<a href="anydev/Column.html" title="interface in anydev">Column</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#getVal()" class="member-name-link">getVal()</a> - Method in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#getViewAreas(java.util.Map)" class="member-name-link">getViewAreas(Map&lt;String, ViewArea&gt;)</a> - Method in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Volume.html#getVolume(anydev.Volume.Unit)" class="member-name-link">getVolume(Volume.Unit)</a> - Method in class anydev.<a href="anydev/Volume.html" title="class in anydev">Volume</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#gr_SetupElements" class="member-name-link">gr_SetupElements</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#gr_SetupElements" class="member-name-link">gr_SetupElements</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#gr_SetupElements" class="member-name-link">gr_SetupElements</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#gr_SetupElements" class="member-name-link">gr_SetupElements</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#gr_SetupElements" class="member-name-link">gr_SetupElements</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:H">H</h2>
 <dl class="index">
+<dt><a href="anydev/Column_Boolean.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class anydev.<a href="anydev/Column_Boolean.html" title="class in anydev">Column_Boolean</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Date.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class anydev.<a href="anydev/Column_Date.html" title="class in anydev">Column_Date</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Double.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class anydev.<a href="anydev/Column_Double.html" title="class in anydev">Column_Double</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Enum.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class anydev.<a href="anydev/Column_Enum.html" title="class in anydev">Column_Enum</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="anydev/Column_Integer.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class anydev.<a href="anydev/Column_Integer.html" title="class in anydev">Column_Integer</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#hasModelDB()" class="member-name-link">hasModelDB()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Column_String.html#hashCode()" class="member-name-link">hashCode()</a> - Method in class anydev.<a href="anydev/Column_String.html" title="class in anydev">Column_String</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#hasTable(anydev.Table)" class="member-name-link">hasTable(Table)</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#hasModelDB()" class="member-name-link">hasModelDB()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#hasState(com.anylogic.engine.IStatechartState)" class="member-name-link">hasState(IStatechartState)</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#hasTable(anydev.Table)" class="member-name-link">hasTable(Table)</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/HyperArrays.html" class="type-name-link" title="class in anydev">HyperArrays</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
 <dd>
@@ -609,19 +844,25 @@ loadScripts(document, 'script');</script>
 <div class="block">Marker interface for all custom AnyDevExceptions
  This allows for easy identification and unified catching of all your model-specific errors.</div>
 </dd>
-<dt><a href="anydev/IColumn.html" class="type-name-link" title="interface in anydev">IColumn</a> - Interface in <a href="anydev/package-summary.html">anydev</a></dt>
+<dt><a href="anydev/DataFactory.html#icon" class="member-name-link">icon</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/IColumn.Type.html" class="type-name-link" title="enum class in anydev">IColumn.Type</a> - Enum Class in <a href="anydev/package-summary.html">anydev</a></dt>
-<dd>
-<div class="block">Define which column types exist.</div>
-</dd>
-<dt><a href="anydev/DataLoader.html#icon" class="member-name-link">icon</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#icon" class="member-name-link">icon</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#icon" class="member-name-link">icon</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#icon" class="member-name-link">icon</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#icon" class="member-name-link">icon</a> - Variable in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Logger.Cause.html#ILLEGAL_ARGUMENT" class="member-name-link">ILLEGAL_ARGUMENT</a> - Enum constant in enum class anydev.<a href="anydev/Logger.Cause.html" title="enum class in anydev">Logger.Cause</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#im_Icon" class="member-name-link">im_Icon</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#im_Icon" class="member-name-link">im_Icon</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#im_Icon" class="member-name-link">im_Icon</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#im_Icon" class="member-name-link">im_Icon</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#image" class="member-name-link">image</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Density.Density_Unit.html#in(anydev.Density.Unit)" class="member-name-link">in(Density.Unit)</a> - Method in interface anydev.<a href="anydev/Density.Density_Unit.html" title="interface in anydev">Density.Density_Unit</a></dt>
 <dd>&nbsp;</dd>
@@ -637,18 +878,16 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="anydev/Logger.Level.html#INFO" class="member-name-link">INFO</a> - Enum constant in enum class anydev.<a href="anydev/Logger.Level.html" title="enum class in anydev">Logger.Level</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#instantiateBaseStructure_xjal()" class="member-name-link">instantiateBaseStructure_xjal()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#instantiateBaseStructure_xjal()" class="member-name-link">instantiateBaseStructure_xjal()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#instantiateBaseStructure_xjal()" class="member-name-link">instantiateBaseStructure_xjal()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#instantiateBaseStructure_xjal()" class="member-name-link">instantiateBaseStructure_xjal()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#instantiateBaseStructure_xjal()" class="member-name-link">instantiateBaseStructure_xjal()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#instantiateBaseStructure_xjal()" class="member-name-link">instantiateBaseStructure_xjal()</a> - Method in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/Column.Type.html#INTEGER" class="member-name-link">INTEGER</a> - Enum constant in enum class anydev.<a href="anydev/Column.Type.html" title="enum class in anydev">Column.Type</a></dt>
-<dd>
-<div class="block">Represents whole numbers.</div>
-</dd>
-<dt><a href="anydev/IColumn.Type.html#INTEGER" class="member-name-link">INTEGER</a> - Enum constant in enum class anydev.<a href="anydev/IColumn.Type.html" title="enum class in anydev">IColumn.Type</a></dt>
-<dd>
-<div class="block">Represents whole numbers.</div>
-</dd>
 <dt><a href="anydev/InvalidArgumentException.html" class="type-name-link" title="class in anydev">InvalidArgumentException</a> - Exception in <a href="anydev/package-summary.html">anydev</a></dt>
 <dd>
 <div class="block">Represents an error due to an illegal or unexpected argument provided to a method.</div>
@@ -673,7 +912,13 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="anydev/SC_String.SC_String_Condition.html#isDatabaseReady()" class="member-name-link">isDatabaseReady()</a> - Method in interface anydev.<a href="anydev/SC_String.SC_String_Condition.html" title="interface in anydev">SC_String.SC_String_Condition</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#isEmbeddedAgentPresentationVisible(com.anylogic.engine.Agent)" class="member-name-link">isEmbeddedAgentPresentationVisible(Agent)</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#isEmbeddedAgentPresentationVisible(com.anylogic.engine.Agent)" class="member-name-link">isEmbeddedAgentPresentationVisible(Agent)</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#isEmbeddedAgentPresentationVisible(com.anylogic.engine.Agent)" class="member-name-link">isEmbeddedAgentPresentationVisible(Agent)</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#isEmbeddedAgentPresentationVisible(com.anylogic.engine.Agent)" class="member-name-link">isEmbeddedAgentPresentationVisible(Agent)</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#isEmbeddedAgentPresentationVisible(com.anylogic.engine.Agent)" class="member-name-link">isEmbeddedAgentPresentationVisible(Agent)</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#isEmbeddedAgentPresentationVisible(com.anylogic.engine.Agent)" class="member-name-link">isEmbeddedAgentPresentationVisible(Agent)</a> - Method in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
@@ -685,9 +930,19 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">NOTE: Does not account for floating-point uncertainty for very small values.</div>
 </dd>
+<dt><a href="anydev/Column_Boolean.html#isEmptyAllowed()" class="member-name-link">isEmptyAllowed()</a> - Method in class anydev.<a href="anydev/Column_Boolean.html" title="class in anydev">Column_Boolean</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Date.html#isEmptyAllowed()" class="member-name-link">isEmptyAllowed()</a> - Method in class anydev.<a href="anydev/Column_Date.html" title="class in anydev">Column_Date</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Double.html#isEmptyAllowed()" class="member-name-link">isEmptyAllowed()</a> - Method in class anydev.<a href="anydev/Column_Double.html" title="class in anydev">Column_Double</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Enum.html#isEmptyAllowed()" class="member-name-link">isEmptyAllowed()</a> - Method in class anydev.<a href="anydev/Column_Enum.html" title="class in anydev">Column_Enum</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="anydev/Column_Integer.html#isEmptyAllowed()" class="member-name-link">isEmptyAllowed()</a> - Method in class anydev.<a href="anydev/Column_Integer.html" title="class in anydev">Column_Integer</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/IColumn.html#isEmptyAllowed()" class="member-name-link">isEmptyAllowed()</a> - Method in interface anydev.<a href="anydev/IColumn.html" title="interface in anydev">IColumn</a></dt>
+<dt><a href="anydev/Column_String.html#isEmptyAllowed()" class="member-name-link">isEmptyAllowed()</a> - Method in class anydev.<a href="anydev/Column_String.html" title="class in anydev">Column_String</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column.html#isEmptyAllowed()" class="member-name-link">isEmptyAllowed()</a> - Method in interface anydev.<a href="anydev/Column.html" title="interface in anydev">Column</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Mass.html#isHeavier(anydev.Mass)" class="member-name-link">isHeavier(Mass)</a> - Method in class anydev.<a href="anydev/Mass.html" title="class in anydev">Mass</a></dt>
 <dd>
@@ -731,9 +986,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="anydev/SC_String.SC_String_Condition.html#isNotNull()" class="member-name-link">isNotNull()</a> - Method in interface anydev.<a href="anydev/SC_String.SC_String_Condition.html" title="interface in anydev">SC_String.SC_String_Condition</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/Column_Integer.html#isNullAllowed()" class="member-name-link">isNullAllowed()</a> - Method in class anydev.<a href="anydev/Column_Integer.html" title="class in anydev">Column_Integer</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="anydev/IColumn.html#isNullAllowed()" class="member-name-link">isNullAllowed()</a> - Method in interface anydev.<a href="anydev/IColumn.html" title="interface in anydev">IColumn</a></dt>
+<dt><a href="anydev/Row.html#isNull(anydev.Column)" class="member-name-link">isNull(Column)</a> - Method in class anydev.<a href="anydev/Row.html" title="class in anydev">Row</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/SC_String.Builder.html#isPartOfEnum(java.lang.Class)" class="member-name-link">isPartOfEnum(Class&lt;? extends Enum&lt;?&gt;&gt;)</a> - Method in class anydev.<a href="anydev/SC_String.Builder.html" title="class in anydev">SC_String.Builder</a></dt>
 <dd>
@@ -741,7 +994,13 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="anydev/SC_String.SC_String_Condition.html#isPartOfEnum(java.lang.Class)" class="member-name-link">isPartOfEnum(Class&lt;? extends Enum&lt;?&gt;&gt;)</a> - Method in interface anydev.<a href="anydev/SC_String.SC_String_Condition.html" title="interface in anydev">SC_String.SC_String_Condition</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#isPublicPresentationDefined()" class="member-name-link">isPublicPresentationDefined()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#isPublicPresentationDefined()" class="member-name-link">isPublicPresentationDefined()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#isPublicPresentationDefined()" class="member-name-link">isPublicPresentationDefined()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#isPublicPresentationDefined()" class="member-name-link">isPublicPresentationDefined()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#isPublicPresentationDefined()" class="member-name-link">isPublicPresentationDefined()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#isPublicPresentationDefined()" class="member-name-link">isPublicPresentationDefined()</a> - Method in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
@@ -757,6 +1016,20 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="anydev/SC_Number.SC_Number_Condition.html#isSmallerOrEqual(java.lang.Number)" class="member-name-link">isSmallerOrEqual(Number)</a> - Method in interface anydev.<a href="anydev/SC_Number.SC_Number_Condition.html" title="interface in anydev">SC_Number.SC_Number_Condition</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Boolean.html#isValid(java.lang.Object)" class="member-name-link">isValid(Object)</a> - Method in class anydev.<a href="anydev/Column_Boolean.html" title="class in anydev">Column_Boolean</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Date.html#isValid(java.lang.Object)" class="member-name-link">isValid(Object)</a> - Method in class anydev.<a href="anydev/Column_Date.html" title="class in anydev">Column_Date</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Double.html#isValid(java.lang.Object)" class="member-name-link">isValid(Object)</a> - Method in class anydev.<a href="anydev/Column_Double.html" title="class in anydev">Column_Double</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Enum.html#isValid(java.lang.Object)" class="member-name-link">isValid(Object)</a> - Method in class anydev.<a href="anydev/Column_Enum.html" title="class in anydev">Column_Enum</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Integer.html#isValid(java.lang.Object)" class="member-name-link">isValid(Object)</a> - Method in class anydev.<a href="anydev/Column_Integer.html" title="class in anydev">Column_Integer</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_String.html#isValid(java.lang.Object)" class="member-name-link">isValid(Object)</a> - Method in class anydev.<a href="anydev/Column_String.html" title="class in anydev">Column_String</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column.html#isValid(java.lang.Object)" class="member-name-link">isValid(Object)</a> - Method in interface anydev.<a href="anydev/Column.html" title="interface in anydev">Column</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:K">K</h2>
 <dl class="index">
@@ -767,7 +1040,13 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:L">L</h2>
 <dl class="index">
-<dt><a href="anydev/DataLoader.html#level" class="member-name-link">level</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#level" class="member-name-link">level</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#level" class="member-name-link">level</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#level" class="member-name-link">level</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#level" class="member-name-link">level</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#level" class="member-name-link">level</a> - Variable in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
@@ -810,17 +1089,13 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Log a new INFO event.</div>
 </dd>
+<dt><a href="anydev/StatechartLogger.html#logState(com.anylogic.engine.IStatechartState,boolean)" class="member-name-link">logState(IStatechartState, boolean)</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>
+<div class="block">Manually update state statistics for given state<br></div>
+</dd>
 <dt><a href="anydev/Logger.html#logWARNING()" class="member-name-link">logWARNING()</a> - Static method in class anydev.<a href="anydev/Logger.html" title="class in anydev">Logger</a></dt>
 <dd>
 <div class="block">Log a new WARNING event.</div>
-</dd>
-<dt><a href="anydev/Column.Type.html#LONG" class="member-name-link">LONG</a> - Enum constant in enum class anydev.<a href="anydev/Column.Type.html" title="enum class in anydev">Column.Type</a></dt>
-<dd>
-<div class="block">Represents larger whole numbers.</div>
-</dd>
-<dt><a href="anydev/IColumn.Type.html#LONG" class="member-name-link">LONG</a> - Enum constant in enum class anydev.<a href="anydev/IColumn.Type.html" title="enum class in anydev">IColumn.Type</a></dt>
-<dd>
-<div class="block">Represents larger whole numbers.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:M">M</h2>
@@ -839,9 +1114,25 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:N">N</h2>
 <dl class="index">
+<dt><a href="anydev/Column_Boolean.html#named(java.lang.String)" class="member-name-link">named(String)</a> - Static method in class anydev.<a href="anydev/Column_Boolean.html" title="class in anydev">Column_Boolean</a></dt>
+<dd>
+<div class="block">Start creating a new boolean column</div>
+</dd>
+<dt><a href="anydev/Column_Date.html#named(java.lang.String)" class="member-name-link">named(String)</a> - Static method in class anydev.<a href="anydev/Column_Date.html" title="class in anydev">Column_Date</a></dt>
+<dd>
+<div class="block">Start creating a new date/timestamp column</div>
+</dd>
+<dt><a href="anydev/Column_Double.html#named(java.lang.String)" class="member-name-link">named(String)</a> - Static method in class anydev.<a href="anydev/Column_Double.html" title="class in anydev">Column_Double</a></dt>
+<dd>
+<div class="block">Start creating a new double column</div>
+</dd>
 <dt><a href="anydev/Column_Integer.html#named(java.lang.String)" class="member-name-link">named(String)</a> - Static method in class anydev.<a href="anydev/Column_Integer.html" title="class in anydev">Column_Integer</a></dt>
 <dd>
 <div class="block">Start creating a new integer column</div>
+</dd>
+<dt><a href="anydev/Column_String.html#named(java.lang.String)" class="member-name-link">named(String)</a> - Static method in class anydev.<a href="anydev/Column_String.html" title="class in anydev">Column_String</a></dt>
+<dd>
+<div class="block">Start creating a new string column</div>
 </dd>
 <dt><a href="anydev/SC_Number.Builder.html#named(java.lang.String)" class="member-name-link">named(String)</a> - Method in class anydev.<a href="anydev/SC_Number.Builder.html" title="class in anydev">SC_Number.Builder</a></dt>
 <dd>
@@ -856,67 +1147,251 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="anydev/SC_String.SC_String_Named.html#named(java.lang.String)" class="member-name-link">named(String)</a> - Method in interface anydev.<a href="anydev/SC_String.SC_String_Named.html" title="interface in anydev">SC_String.SC_String_Named</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Enum.html#named(java.lang.String,java.lang.Class)" class="member-name-link">named(String, Class&lt;? extends Enum&gt;)</a> - Static method in class anydev.<a href="anydev/Column_Enum.html" title="class in anydev">Column_Enum</a></dt>
+<dd>
+<div class="block">Start creating a new string column</div>
+</dd>
 </dl>
 <h2 class="title" id="I:O">O</h2>
 <dl class="index">
-<dt><a href="anydev/Column.ColumnBuilderNameStep.html#of(anydev.Column.Type)" class="member-name-link">of(Column.Type)</a> - Method in interface anydev.<a href="anydev/Column.ColumnBuilderNameStep.html" title="interface in anydev">Column.ColumnBuilderNameStep</a></dt>
+<dt><a href="anydev/DataFactory.html#onChange_p_AutoCheckIntegrity()" class="member-name-link">onChange_p_AutoCheckIntegrity()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>
+<div class="block">Calls "On change" action for parameter p_AutoCheckIntegrity.<br>
+ Note that 'oldValue' in that action will be unavailable if this method is called by user
+ (current parameter value will be passed as 'oldValue').<br>
+ Please call <code>set_p_AutoCheckIntegrity()</code> method instead.</div>
+</dd>
+<dt><a href="anydev/DataFactory.html#onChange_p_AutoCheckIntegrity_xjal(boolean)" class="member-name-link">onChange_p_AutoCheckIntegrity_xjal(boolean)</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#onChange_p_AutoLoad()" class="member-name-link">onChange_p_AutoLoad()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#onChange_p_AutoLoad()" class="member-name-link">onChange_p_AutoLoad()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>
 <div class="block">Calls "On change" action for parameter p_AutoLoad.<br>
  Note that 'oldValue' in that action will be unavailable if this method is called by user
  (current parameter value will be passed as 'oldValue').<br>
  Please call <code>set_p_AutoLoad()</code> method instead.</div>
 </dd>
-<dt><a href="anydev/DataLoader.html#onChange_p_AutoLoad_xjal(boolean)" class="member-name-link">onChange_p_AutoLoad_xjal(boolean)</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#onChange_p_AutoLoad_xjal(boolean)" class="member-name-link">onChange_p_AutoLoad_xjal(boolean)</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#onChange_p_Tables()" class="member-name-link">onChange_p_Tables()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/StatechartLogger.html#onChange_p_AutoLog()" class="member-name-link">onChange_p_AutoLog()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>
+<div class="block">Calls "On change" action for parameter p_AutoLog.<br>
+ Note that 'oldValue' in that action will be unavailable if this method is called by user
+ (current parameter value will be passed as 'oldValue').<br>
+ Please call <code>set_p_AutoLog()</code> method instead.</div>
+</dd>
+<dt><a href="anydev/StatechartLogger.html#onChange_p_AutoLog_xjal(boolean)" class="member-name-link">onChange_p_AutoLog_xjal(boolean)</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#onChange_p_LogActivity()" class="member-name-link">onChange_p_LogActivity()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>
+<div class="block">Calls "On change" action for parameter p_LogActivity.<br>
+ Note that 'oldValue' in that action will be unavailable if this method is called by user
+ (current parameter value will be passed as 'oldValue').<br>
+ Please call <code>set_p_LogActivity()</code> method instead.</div>
+</dd>
+<dt><a href="anydev/Outputs.html#onChange_p_LogActivity_xjal(boolean)" class="member-name-link">onChange_p_LogActivity_xjal(boolean)</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#onChange_p_Moment()" class="member-name-link">onChange_p_Moment()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>
+<div class="block">Calls "On change" action for parameter p_Moment.<br>
+ Note that 'oldValue' in that action will be unavailable if this method is called by user
+ (current parameter value will be passed as 'oldValue').<br>
+ Please call <code>set_p_Moment()</code> method instead.</div>
+</dd>
+<dt><a href="anydev/Outputs.html#onChange_p_Moment_xjal(int)" class="member-name-link">onChange_p_Moment_xjal(int)</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#onChange_p_States()" class="member-name-link">onChange_p_States()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>
+<div class="block">Calls "On change" action for parameter p_States.<br>
+ Note that 'oldValue' in that action will be unavailable if this method is called by user
+ (current parameter value will be passed as 'oldValue').<br>
+ Please call <code>set_p_States()</code> method instead.</div>
+</dd>
+<dt><a href="anydev/StatechartLogger.html#onChange_p_States_xjal(com.anylogic.engine.IStatechartState%5B%5D)" class="member-name-link">onChange_p_States_xjal(IStatechartState[])</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#onChange_p_Tables()" class="member-name-link">onChange_p_Tables()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>
 <div class="block">Calls "On change" action for parameter p_Tables.<br>
  Note that 'oldValue' in that action will be unavailable if this method is called by user
  (current parameter value will be passed as 'oldValue').<br>
  Please call <code>set_p_Tables()</code> method instead.</div>
 </dd>
-<dt><a href="anydev/DataLoader.html#onChange_p_Tables_xjal(anydev.Table%5B%5D)" class="member-name-link">onChange_p_Tables_xjal(Table[])</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#onChange_p_Tables()" class="member-name-link">onChange_p_Tables()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>
+<div class="block">Calls "On change" action for parameter p_Tables.<br>
+ Note that 'oldValue' in that action will be unavailable if this method is called by user
+ (current parameter value will be passed as 'oldValue').<br>
+ Please call <code>set_p_Tables()</code> method instead.</div>
+</dd>
+<dt><a href="anydev/Scenario.html#onChange_p_Tables()" class="member-name-link">onChange_p_Tables()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>
+<div class="block">Calls "On change" action for parameter p_Tables.<br>
+ Note that 'oldValue' in that action will be unavailable if this method is called by user
+ (current parameter value will be passed as 'oldValue').<br>
+ Please call <code>set_p_Tables()</code> method instead.</div>
+</dd>
+<dt><a href="anydev/DataFactory.html#onChange_p_Tables_xjal(anydev.Table%5B%5D)" class="member-name-link">onChange_p_Tables_xjal(Table[])</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#onOwnerChanged_xjal()" class="member-name-link">onOwnerChanged_xjal()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#onChange_p_Tables_xjal(anydev.Table%5B%5D)" class="member-name-link">onChange_p_Tables_xjal(Table[])</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#onChange_p_Tables_xjal(anydev.Table%5B%5D)" class="member-name-link">onChange_p_Tables_xjal(Table[])</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#onChange_p_UsePieChart()" class="member-name-link">onChange_p_UsePieChart()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>
+<div class="block">Calls "On change" action for parameter p_UsePieChart.<br>
+ Note that 'oldValue' in that action will be unavailable if this method is called by user
+ (current parameter value will be passed as 'oldValue').<br>
+ Please call <code>set_p_UsePieChart()</code> method instead.</div>
+</dd>
+<dt><a href="anydev/StatechartLogger.html#onChange_p_UsePieChart_xjal(boolean)" class="member-name-link">onChange_p_UsePieChart_xjal(boolean)</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#onDestroy()" class="member-name-link">onDestroy()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#onDestroy()" class="member-name-link">onDestroy()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#onOwnerChanged_xjal()" class="member-name-link">onOwnerChanged_xjal()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#onOwnerChanged_xjal()" class="member-name-link">onOwnerChanged_xjal()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#onOwnerChanged_xjal()" class="member-name-link">onOwnerChanged_xjal()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#onOwnerChanged_xjal()" class="member-name-link">onOwnerChanged_xjal()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#onOwnerChanged_xjal()" class="member-name-link">onOwnerChanged_xjal()</a> - Method in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#onStartup()" class="member-name-link">onStartup()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#onStartup()" class="member-name-link">onStartup()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#onStartup()" class="member-name-link">onStartup()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#onStartup()" class="member-name-link">onStartup()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#onStartup()" class="member-name-link">onStartup()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Logger.Cause.html#OTHER" class="member-name-link">OTHER</a> - Enum constant in enum class anydev.<a href="anydev/Logger.Cause.html" title="enum class in anydev">Logger.Cause</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html" class="type-name-link" title="class in anydev">Outputs</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
+<dd>
+<div class="block">Use to define which output data to write, when to write it and where to write it into.</div>
+</dd>
+<dt><a href="anydev/Outputs.html#%3Cinit%3E()" class="member-name-link">Outputs()</a> - Constructor for class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>
+<div class="block">Simple constructor.</div>
+</dd>
+<dt><a href="anydev/Outputs.html#%3Cinit%3E(anydev.Table%5B%5D,int,boolean)" class="member-name-link">Outputs(Table[], int, boolean)</a> - Constructor for class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>
+<div class="block">Simple constructor.</div>
+</dd>
+<dt><a href="anydev/Outputs.html#%3Cinit%3E(com.anylogic.engine.Engine,com.anylogic.engine.Agent,com.anylogic.engine.AgentList)" class="member-name-link">Outputs(Engine, Agent, AgentList&lt;? extends Outputs&gt;)</a> - Constructor for class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>
+<div class="block">Constructor</div>
+</dd>
 </dl>
 <h2 class="title" id="I:P">P</h2>
 <dl class="index">
-<dt><a href="anydev/DataLoader.html#p_AutoLoad" class="member-name-link">p_AutoLoad</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#p_AutoCheckIntegrity" class="member-name-link">p_AutoCheckIntegrity</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>
+<div class="block">Tick to automatically ensure that all selected tables match the *structure* of their model-DB counterpart (same number of columns, same names, same data type)-<br>
+ Throws DataIntegrityException if issues are found<br>
+ Untick to manage yourself (via DataFactory.checkIntegrity(Table))</div>
+</dd>
+<dt><a href="anydev/DataFactory.html#p_AutoLoad" class="member-name-link">p_AutoLoad</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>
 <div class="block">Tick to fill selected tables with the actual data from their respective model-DB tables on start.<br>
- Untick to manage yourself (via DataLoader.fillFromModelDB)</div>
+ Untick to manage yourself (via DataFactory.fillFromModelDB)</div>
 </dd>
-<dt><a href="anydev/DataLoader.html#p_Tables" class="member-name-link">p_Tables</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/StatechartLogger.html#p_AutoLog" class="member-name-link">p_AutoLog</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>
-<div class="block">Define which tables should be handled by this DataLoader.</div>
+<div class="block">Tick to automatically collect KPIs on the selected states, untick to manually provide data (via <code>logState()</code></div>
 </dd>
-<dt><a href="anydev/DataLoader.html#presentation" class="member-name-link">presentation</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#p_LogActivity" class="member-name-link">p_LogActivity</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>
+<div class="block">Tick to see Logger INFO log entries updating you on all relevant activities, untick to only see WARNINGs or thrown ERRORs</div>
+</dd>
+<dt><a href="anydev/Outputs.html#p_Moment" class="member-name-link">p_Moment</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>
+<div class="block">Decide when to write outputs:<br>
+ - "Model end": writes when this block is destroyed (NOTE: Not necessarily when the model ends!)<br>
+ - "Manual call": Writes when you call the "write()" function</div>
+</dd>
+<dt><a href="anydev/StatechartLogger.html#p_States" class="member-name-link">p_States</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>
+<div class="block">Define which statechart states this logger should monitor and track.<br></div>
+</dd>
+<dt><a href="anydev/DataFactory.html#p_Tables" class="member-name-link">p_Tables</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>
+<div class="block">Define which tables should be handled by this DataFactory.</div>
+</dd>
+<dt><a href="anydev/Outputs.html#p_Tables" class="member-name-link">p_Tables</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>
+<div class="block">Define which tables to write as outputs<br></div>
+</dd>
+<dt><a href="anydev/Scenario.html#p_Tables" class="member-name-link">p_Tables</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>
+<div class="block">Define which tables are used for this scenario.</div>
+</dd>
+<dt><a href="anydev/StatechartLogger.html#p_UsePieChart" class="member-name-link">p_UsePieChart</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>
+<div class="block">Tick to actually animate the associated pie chart of this logger, untick to make it inoperable.<br></div>
+</dd>
+<dt><a href="anydev/DataFactory.html#presentation" class="member-name-link">presentation</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#presentation" class="member-name-link">presentation</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#presentation" class="member-name-link">presentation</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#presentation" class="member-name-link">presentation</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#presentation" class="member-name-link">presentation</a> - Variable in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:R">R</h2>
 <dl class="index">
-<dt><a href="anydev/DataLoader.html#rec_FrameAgents" class="member-name-link">rec_FrameAgents</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#rec_FrameAgents" class="member-name-link">rec_FrameAgents</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#rec_FrameFunctions" class="member-name-link">rec_FrameFunctions</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#rec_FrameAgents" class="member-name-link">rec_FrameAgents</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#rec_FrameIcon" class="member-name-link">rec_FrameIcon</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Scenario.html#rec_FrameAgents" class="member-name-link">rec_FrameAgents</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#rec_FrameMain" class="member-name-link">rec_FrameMain</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/StatechartLogger.html#rec_FrameAgents" class="member-name-link">rec_FrameAgents</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#rec_FrameParameters" class="member-name-link">rec_FrameParameters</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#rec_FrameFunctions" class="member-name-link">rec_FrameFunctions</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#rec_FrameVariables" class="member-name-link">rec_FrameVariables</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#rec_FrameFunctions" class="member-name-link">rec_FrameFunctions</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#rec_FrameFunctions" class="member-name-link">rec_FrameFunctions</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#rec_FrameFunctions" class="member-name-link">rec_FrameFunctions</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#rec_FrameIcon" class="member-name-link">rec_FrameIcon</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#rec_FrameIcon" class="member-name-link">rec_FrameIcon</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#rec_FrameIcon" class="member-name-link">rec_FrameIcon</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#rec_FrameIcon" class="member-name-link">rec_FrameIcon</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#rec_FrameMain" class="member-name-link">rec_FrameMain</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#rec_FrameMain" class="member-name-link">rec_FrameMain</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#rec_FrameMain" class="member-name-link">rec_FrameMain</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#rec_FrameMain" class="member-name-link">rec_FrameMain</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#rec_FrameParameters" class="member-name-link">rec_FrameParameters</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#rec_FrameParameters" class="member-name-link">rec_FrameParameters</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#rec_FrameParameters" class="member-name-link">rec_FrameParameters</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#rec_FrameParameters" class="member-name-link">rec_FrameParameters</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#rec_FrameVariables" class="member-name-link">rec_FrameVariables</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#rec_FrameVariables" class="member-name-link">rec_FrameVariables</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#rec_FrameVariables" class="member-name-link">rec_FrameVariables</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#rec_FrameVariables" class="member-name-link">rec_FrameVariables</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Row.html" class="type-name-link" title="class in anydev">Row</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
 <dd>
@@ -948,8 +1423,6 @@ loadScripts(document, 'script');</script>
 <h2 class="title" id="I:S">S</h2>
 <dl class="index">
 <dt><a href="anydev/Logger.Cause.html#SANITY_CHECK" class="member-name-link">SANITY_CHECK</a> - Enum constant in enum class anydev.<a href="anydev/Logger.Cause.html" title="enum class in anydev">Logger.Cause</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#sanityCheck(anydev.Table)" class="member-name-link">sanityCheck(Table)</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/SanityCheck.html" class="type-name-link" title="class in anydev">SanityCheck</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
 <dd>
@@ -995,21 +1468,84 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/SC_String.SC_String_Response.html" class="type-name-link" title="interface in anydev">SC_String.SC_String_Response</a> - Interface in <a href="anydev/package-summary.html">anydev</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#scale" class="member-name-link">scale</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#scale" class="member-name-link">scale</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#set_p_AutoLoad(boolean)" class="member-name-link">set_p_AutoLoad(boolean)</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#scale" class="member-name-link">scale</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#set_p_Tables(anydev.Table%5B%5D)" class="member-name-link">set_p_Tables(Table[])</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Scenario.html#scale" class="member-name-link">scale</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#setParameter(java.lang.String,java.lang.Object,boolean)" class="member-name-link">setParameter(String, Object, boolean)</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/StatechartLogger.html#scale" class="member-name-link">scale</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#setParametersToDefaultValues()" class="member-name-link">setParametersToDefaultValues()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Scenario.html" class="type-name-link" title="class in anydev">Scenario</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#%3Cinit%3E()" class="member-name-link">Scenario()</a> - Constructor for class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>
+<div class="block">Simple constructor.</div>
+</dd>
+<dt><a href="anydev/Scenario.html#%3Cinit%3E(anydev.Table%5B%5D)" class="member-name-link">Scenario(Table[])</a> - Constructor for class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>
+<div class="block">Simple constructor.</div>
+</dd>
+<dt><a href="anydev/Scenario.html#%3Cinit%3E(com.anylogic.engine.Engine,com.anylogic.engine.Agent,com.anylogic.engine.AgentList)" class="member-name-link">Scenario(Engine, Agent, AgentList&lt;? extends Scenario&gt;)</a> - Constructor for class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>
+<div class="block">Constructor</div>
+</dd>
+<dt><a href="anydev/DataFactory.html#set_p_AutoCheckIntegrity(boolean)" class="member-name-link">set_p_AutoCheckIntegrity(boolean)</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#set_p_AutoLoad(boolean)" class="member-name-link">set_p_AutoLoad(boolean)</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#set_p_AutoLog(boolean)" class="member-name-link">set_p_AutoLog(boolean)</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#set_p_LogActivity(boolean)" class="member-name-link">set_p_LogActivity(boolean)</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#set_p_Moment(int)" class="member-name-link">set_p_Moment(int)</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#set_p_States(com.anylogic.engine.IStatechartState%5B%5D)" class="member-name-link">set_p_States(IStatechartState[])</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#set_p_Tables(anydev.Table%5B%5D)" class="member-name-link">set_p_Tables(Table[])</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#set_p_Tables(anydev.Table%5B%5D)" class="member-name-link">set_p_Tables(Table[])</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#set_p_Tables(anydev.Table%5B%5D)" class="member-name-link">set_p_Tables(Table[])</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#set_p_UsePieChart(boolean)" class="member-name-link">set_p_UsePieChart(boolean)</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#setParameter(java.lang.String,java.lang.Object,boolean)" class="member-name-link">setParameter(String, Object, boolean)</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#setParameter(java.lang.String,java.lang.Object,boolean)" class="member-name-link">setParameter(String, Object, boolean)</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#setParameter(java.lang.String,java.lang.Object,boolean)" class="member-name-link">setParameter(String, Object, boolean)</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#setParameter(java.lang.String,java.lang.Object,boolean)" class="member-name-link">setParameter(String, Object, boolean)</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#setParametersToDefaultValues()" class="member-name-link">setParametersToDefaultValues()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#setParametersToDefaultValues()" class="member-name-link">setParametersToDefaultValues()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#setParametersToDefaultValues()" class="member-name-link">setParametersToDefaultValues()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#setParametersToDefaultValues()" class="member-name-link">setParametersToDefaultValues()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/RunConfiguration.html#setup(com.anylogic.engine.gui.IExperimentHost)" class="member-name-link">setup(IExperimentHost)</a> - Method in class anydev.<a href="anydev/RunConfiguration.html" title="class in anydev">RunConfiguration</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/RunConfiguration.html#setupEngine(com.anylogic.engine.Engine)" class="member-name-link">setupEngine(Engine)</a> - Method in class anydev.<a href="anydev/RunConfiguration.html" title="class in anydev">RunConfiguration</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#setupPlainVariables_xjal()" class="member-name-link">setupPlainVariables_xjal()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#setupPlainVariables_xjal()" class="member-name-link">setupPlainVariables_xjal()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>
+<div class="block">Assigning initial values for plain variables<br>
+ <em>This method isn't designed to be called by user and may be removed in future releases.</em></div>
+</dd>
+<dt><a href="anydev/Outputs.html#setupPlainVariables_xjal()" class="member-name-link">setupPlainVariables_xjal()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>
+<div class="block">Assigning initial values for plain variables<br>
+ <em>This method isn't designed to be called by user and may be removed in future releases.</em></div>
+</dd>
+<dt><a href="anydev/Scenario.html#setupPlainVariables_xjal()" class="member-name-link">setupPlainVariables_xjal()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>
+<div class="block">Assigning initial values for plain variables<br>
+ <em>This method isn't designed to be called by user and may be removed in future releases.</em></div>
+</dd>
+<dt><a href="anydev/StatechartLogger.html#setupPlainVariables_xjal()" class="member-name-link">setupPlainVariables_xjal()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>
 <div class="block">Assigning initial values for plain variables<br>
  <em>This method isn't designed to be called by user and may be removed in future releases.</em></div>
@@ -1023,13 +1559,21 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Logger_SolutionStep.html#solveBy(java.lang.String)" class="member-name-link">solveBy(String)</a> - Method in interface anydev.<a href="anydev/Logger_SolutionStep.html" title="interface in anydev">Logger_SolutionStep</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/Column.Type.html#STRING" class="member-name-link">STRING</a> - Enum constant in enum class anydev.<a href="anydev/Column.Type.html" title="enum class in anydev">Column.Type</a></dt>
+<dt><a href="anydev/StatechartLogger.html" class="type-name-link" title="class in anydev">StatechartLogger</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
 <dd>
-<div class="block">Represents textual data.</div>
+<div class="block">Tracks data and KPIs about a given statechart in prescribed intervals.</div>
 </dd>
-<dt><a href="anydev/IColumn.Type.html#STRING" class="member-name-link">STRING</a> - Enum constant in enum class anydev.<a href="anydev/IColumn.Type.html" title="enum class in anydev">IColumn.Type</a></dt>
+<dt><a href="anydev/StatechartLogger.html#%3Cinit%3E()" class="member-name-link">StatechartLogger()</a> - Constructor for class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>
-<div class="block">Represents textual data.</div>
+<div class="block">Simple constructor.</div>
+</dd>
+<dt><a href="anydev/StatechartLogger.html#%3Cinit%3E(com.anylogic.engine.Engine,com.anylogic.engine.Agent,com.anylogic.engine.AgentList)" class="member-name-link">StatechartLogger(Engine, Agent, AgentList&lt;? extends StatechartLogger&gt;)</a> - Constructor for class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>
+<div class="block">Constructor</div>
+</dd>
+<dt><a href="anydev/StatechartLogger.html#%3Cinit%3E(com.anylogic.engine.IStatechartState%5B%5D,boolean,boolean)" class="member-name-link">StatechartLogger(IStatechartState[], boolean, boolean)</a> - Constructor for class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>
+<div class="block">Simple constructor.</div>
 </dd>
 <dt><a href="anydev/Mass.html#subtract(anydev.Mass)" class="member-name-link">subtract(Mass)</a> - Method in class anydev.<a href="anydev/Mass.html" title="class in anydev">Mass</a></dt>
 <dd>
@@ -1060,25 +1604,81 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Constructor</div>
 </dd>
-<dt><a href="anydev/DataLoader.html#text_Autoload" class="member-name-link">text_Autoload</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#text_Autoload" class="member-name-link">text_Autoload</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#text_Description" class="member-name-link">text_Description</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#text_AutoSC" class="member-name-link">text_AutoSC</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#text_Frame_Heading" class="member-name-link">text_Frame_Heading</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#text_Description" class="member-name-link">text_Description</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#text_Title_Agents" class="member-name-link">text_Title_Agents</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#text_Description" class="member-name-link">text_Description</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#text_Title_Functions" class="member-name-link">text_Title_Functions</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Scenario.html#text_Description" class="member-name-link">text_Description</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#text_Title_Functions1" class="member-name-link">text_Title_Functions1</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/StatechartLogger.html#text_Description" class="member-name-link">text_Description</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#text_Title_Functions2" class="member-name-link">text_Title_Functions2</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#text_Frame_Heading" class="member-name-link">text_Frame_Heading</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#text_Title_Icon" class="member-name-link">text_Title_Icon</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#text_Frame_Heading" class="member-name-link">text_Frame_Heading</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#text_Title_Parameters" class="member-name-link">text_Title_Parameters</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Scenario.html#text_Frame_Heading" class="member-name-link">text_Frame_Heading</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#text_Title_Variables" class="member-name-link">text_Title_Variables</a> - Variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/StatechartLogger.html#text_Frame_Heading" class="member-name-link">text_Frame_Heading</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#text_Title_Agents" class="member-name-link">text_Title_Agents</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#text_Title_Agents" class="member-name-link">text_Title_Agents</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#text_Title_Agents" class="member-name-link">text_Title_Agents</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#text_Title_Agents" class="member-name-link">text_Title_Agents</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#text_Title_Functions" class="member-name-link">text_Title_Functions</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#text_Title_Functions" class="member-name-link">text_Title_Functions</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#text_Title_Functions" class="member-name-link">text_Title_Functions</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#text_Title_Functions" class="member-name-link">text_Title_Functions</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#text_Title_Functions1" class="member-name-link">text_Title_Functions1</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#text_Title_Functions1" class="member-name-link">text_Title_Functions1</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#text_Title_Functions1" class="member-name-link">text_Title_Functions1</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#text_Title_Functions1" class="member-name-link">text_Title_Functions1</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#text_Title_Functions2" class="member-name-link">text_Title_Functions2</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#text_Title_Functions2" class="member-name-link">text_Title_Functions2</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#text_Title_Functions2" class="member-name-link">text_Title_Functions2</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#text_Title_Functions2" class="member-name-link">text_Title_Functions2</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#text_Title_Icon" class="member-name-link">text_Title_Icon</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#text_Title_Icon" class="member-name-link">text_Title_Icon</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#text_Title_Icon" class="member-name-link">text_Title_Icon</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#text_Title_Icon" class="member-name-link">text_Title_Icon</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#text_Title_Parameters" class="member-name-link">text_Title_Parameters</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#text_Title_Parameters" class="member-name-link">text_Title_Parameters</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#text_Title_Parameters" class="member-name-link">text_Title_Parameters</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#text_Title_Parameters" class="member-name-link">text_Title_Parameters</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#text_Title_Variables" class="member-name-link">text_Title_Variables</a> - Variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#text_Title_Variables" class="member-name-link">text_Title_Variables</a> - Variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#text_Title_Variables" class="member-name-link">text_Title_Variables</a> - Variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#text_Title_Variables" class="member-name-link">text_Title_Variables</a> - Variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/SanityCheck.html#thatNumber(java.lang.Number)" class="member-name-link">thatNumber(Number)</a> - Static method in class anydev.<a href="anydev/SanityCheck.html" title="class in anydev">SanityCheck</a></dt>
 <dd>
@@ -1093,13 +1693,18 @@ loadScripts(document, 'script');</script>
 <dt><a href="anydev/Density.Unit.html#TON_PER_CUBIC_M" class="member-name-link">TON_PER_CUBIC_M</a> - Enum constant in enum class anydev.<a href="anydev/Density.Unit.html" title="enum class in anydev">Density.Unit</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/AnyDevException.html#toString()" class="member-name-link">toString()</a> - Method in exception anydev.<a href="anydev/AnyDevException.html" title="class in anydev">AnyDevException</a></dt>
-<dd>
-<div class="block">Provides a more detailed string representation of the exception,
- including error code and logger details.</div>
-</dd>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Boolean.html#toString()" class="member-name-link">toString()</a> - Method in class anydev.<a href="anydev/Column_Boolean.html" title="class in anydev">Column_Boolean</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Date.html#toString()" class="member-name-link">toString()</a> - Method in class anydev.<a href="anydev/Column_Date.html" title="class in anydev">Column_Date</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Double.html#toString()" class="member-name-link">toString()</a> - Method in class anydev.<a href="anydev/Column_Double.html" title="class in anydev">Column_Double</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Column_Enum.html#toString()" class="member-name-link">toString()</a> - Method in class anydev.<a href="anydev/Column_Enum.html" title="class in anydev">Column_Enum</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="anydev/Column_Integer.html#toString()" class="member-name-link">toString()</a> - Method in class anydev.<a href="anydev/Column_Integer.html" title="class in anydev">Column_Integer</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/Column.html#toString()" class="member-name-link">toString()</a> - Method in class anydev.<a href="anydev/Column.html" title="class in anydev">Column</a></dt>
+<dt><a href="anydev/Column_String.html#toString()" class="member-name-link">toString()</a> - Method in class anydev.<a href="anydev/Column_String.html" title="class in anydev">Column_String</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Density.html#toString()" class="member-name-link">toString()</a> - Method in class anydev.<a href="anydev/Density.html" title="class in anydev">Density</a></dt>
 <dd>&nbsp;</dd>
@@ -1131,26 +1736,26 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="anydev/UnitTest.html#%3Cinit%3E()" class="member-name-link">UnitTest()</a> - Constructor for class anydev.<a href="anydev/UnitTest.html" title="class in anydev">UnitTest</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/Column.Type.html#UNKNOWN" class="member-name-link">UNKNOWN</a> - Enum constant in enum class anydev.<a href="anydev/Column.Type.html" title="enum class in anydev">Column.Type</a></dt>
+<dt><a href="anydev/Utils.html" class="type-name-link" title="class in anydev">Utils</a> - Class in <a href="anydev/package-summary.html">anydev</a></dt>
 <dd>
-<div class="block">Represents a type that could not be determined or is highly custom/unknown.</div>
+<div class="block">Utils: A set of minor functions that can be used in various conditions such as:
+ - finding unique elements in a list
+ - prtnting a clean stack trace</div>
 </dd>
-<dt><a href="anydev/IColumn.Type.html#UNKNOWN" class="member-name-link">UNKNOWN</a> - Enum constant in enum class anydev.<a href="anydev/IColumn.Type.html" title="enum class in anydev">IColumn.Type</a></dt>
-<dd>
-<div class="block">Represents a type that could not be determined or is highly custom/unknown.</div>
-</dd>
+<dt><a href="anydev/Utils.html#%3Cinit%3E()" class="member-name-link">Utils()</a> - Constructor for class anydev.<a href="anydev/Utils.html" title="class in anydev">Utils</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:V">V</h2>
 <dl class="index">
-<dt><a href="anydev/Column.Type.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum class anydev.<a href="anydev/Column.Type.html" title="enum class in anydev">Column.Type</a></dt>
+<dt><a href="anydev/Outputs.html#v_DATE_FORMAT_FILENAME" class="member-name-link">v_DATE_FORMAT_FILENAME</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
 <dd>
-<div class="block">Returns the enum constant of this class with the specified name.</div>
+<div class="block">Date format used by AnyLogic when creating output- database files.</div>
+</dd>
+<dt><a href="anydev/Outputs.html#v_PATH_OUTPUT_FOLDER" class="member-name-link">v_PATH_OUTPUT_FOLDER</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>
+<div class="block">Default path to where output files should be stored<br></div>
 </dd>
 <dt><a href="anydev/Density.Unit.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum class anydev.<a href="anydev/Density.Unit.html" title="enum class in anydev">Density.Unit</a></dt>
-<dd>
-<div class="block">Returns the enum constant of this class with the specified name.</div>
-</dd>
-<dt><a href="anydev/IColumn.Type.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum class anydev.<a href="anydev/IColumn.Type.html" title="enum class in anydev">IColumn.Type</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this class with the specified name.</div>
 </dd>
@@ -1170,17 +1775,7 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the enum constant of this class with the specified name.</div>
 </dd>
-<dt><a href="anydev/Column.Type.html#values()" class="member-name-link">values()</a> - Static method in enum class anydev.<a href="anydev/Column.Type.html" title="enum class in anydev">Column.Type</a></dt>
-<dd>
-<div class="block">Returns an array containing the constants of this enum class, in
-the order they are declared.</div>
-</dd>
 <dt><a href="anydev/Density.Unit.html#values()" class="member-name-link">values()</a> - Static method in enum class anydev.<a href="anydev/Density.Unit.html" title="enum class in anydev">Density.Unit</a></dt>
-<dd>
-<div class="block">Returns an array containing the constants of this enum class, in
-the order they are declared.</div>
-</dd>
-<dt><a href="anydev/IColumn.Type.html#values()" class="member-name-link">values()</a> - Static method in enum class anydev.<a href="anydev/IColumn.Type.html" title="enum class in anydev">IColumn.Type</a></dt>
 <dd>
 <div class="block">Returns an array containing the constants of this enum class, in
 the order they are declared.</div>
@@ -1223,7 +1818,8 @@ the order they are declared.</div>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/Row.Builder.html#with(anydev.Column,java.lang.Object)" class="member-name-link">with(Column, Object)</a> - Method in class anydev.<a href="anydev/Row.Builder.html" title="class in anydev">Row.Builder</a></dt>
 <dd>
-<div class="block">Add anothercolumn and its corresponding data item to this row</div>
+<div class="block">Add another column and its corresponding data item to this row
+ Applies full sanity-checking on given dataItem (can it be added, should we use column's default-value instead...)</div>
 </dd>
 <dt><a href="anydev/Row.html#with(anydev.Column,java.lang.Object)" class="member-name-link">with(Column, Object)</a> - Static method in class anydev.<a href="anydev/Row.html" title="class in anydev">Row</a></dt>
 <dd>
@@ -1233,50 +1829,191 @@ the order they are declared.</div>
 <dd>
 <div class="block">Include given column into the table definition.</div>
 </dd>
+<dt><a href="anydev/Column_Boolean.ColumnBooleanBuilder.html#withDefaultValue(boolean)" class="member-name-link">withDefaultValue(boolean)</a> - Method in class anydev.<a href="anydev/Column_Boolean.ColumnBooleanBuilder.html" title="class in anydev">Column_Boolean.ColumnBooleanBuilder</a></dt>
+<dd>
+<div class="block">Sets a default value for this column.</div>
+</dd>
+<dt><a href="anydev/Column_Double.ColumnDoubleBuilder.html#withDefaultValue(double)" class="member-name-link">withDefaultValue(double)</a> - Method in class anydev.<a href="anydev/Column_Double.ColumnDoubleBuilder.html" title="class in anydev">Column_Double.ColumnDoubleBuilder</a></dt>
+<dd>
+<div class="block">Sets a default value for this column.</div>
+</dd>
 <dt><a href="anydev/Column_Integer.ColumnIntegerBuilder.html#withDefaultValue(int)" class="member-name-link">withDefaultValue(int)</a> - Method in class anydev.<a href="anydev/Column_Integer.ColumnIntegerBuilder.html" title="class in anydev">Column_Integer.ColumnIntegerBuilder</a></dt>
 <dd>
 <div class="block">Sets a default value for this column.</div>
+</dd>
+<dt><a href="anydev/Column_Enum.ColumnStringBuilder.html#withDefaultValue(java.lang.Enum)" class="member-name-link">withDefaultValue(Enum&lt;?&gt;)</a> - Method in class anydev.<a href="anydev/Column_Enum.ColumnStringBuilder.html" title="class in anydev">Column_Enum.ColumnStringBuilder</a></dt>
+<dd>
+<div class="block">Sets a default value for this column
+ Used if no value was set and column <code>allowsNull()</code> or <code>allowsEmpty()</code>.</div>
+</dd>
+<dt><a href="anydev/Column_String.ColumnStringBuilder.html#withDefaultValue(java.lang.String)" class="member-name-link">withDefaultValue(String)</a> - Method in class anydev.<a href="anydev/Column_String.ColumnStringBuilder.html" title="class in anydev">Column_String.ColumnStringBuilder</a></dt>
+<dd>
+<div class="block">Sets a default value for this column.</div>
+</dd>
+<dt><a href="anydev/Column_Date.ColumnDateBuilder.html#withDefaultValue(java.time.LocalDate)" class="member-name-link">withDefaultValue(LocalDate)</a> - Method in class anydev.<a href="anydev/Column_Date.ColumnDateBuilder.html" title="class in anydev">Column_Date.ColumnDateBuilder</a></dt>
+<dd>
+<div class="block">Sets a default value for this column.</div>
+</dd>
+<dt><a href="anydev/Column_Date.ColumnDateBuilder.html#withDefaultValue(java.time.LocalDateTime)" class="member-name-link">withDefaultValue(LocalDateTime)</a> - Method in class anydev.<a href="anydev/Column_Date.ColumnDateBuilder.html" title="class in anydev">Column_Date.ColumnDateBuilder</a></dt>
+<dd>
+<div class="block">Sets a default value for this column.</div>
+</dd>
+<dt><a href="anydev/Column_Date.ColumnDateBuilder.html#withDefaultValue(java.util.Date)" class="member-name-link">withDefaultValue(Date)</a> - Method in class anydev.<a href="anydev/Column_Date.ColumnDateBuilder.html" title="class in anydev">Column_Date.ColumnDateBuilder</a></dt>
+<dd>
+<div class="block">Sets a default value for this column.</div>
+</dd>
+<dt><a href="anydev/Column_Double.ColumnDoubleBuilder.html#withMaxValue(double)" class="member-name-link">withMaxValue(double)</a> - Method in class anydev.<a href="anydev/Column_Double.ColumnDoubleBuilder.html" title="class in anydev">Column_Double.ColumnDoubleBuilder</a></dt>
+<dd>
+<div class="block">Sets a maximum allowed value for this column.</div>
 </dd>
 <dt><a href="anydev/Column_Integer.ColumnIntegerBuilder.html#withMaxValue(int)" class="member-name-link">withMaxValue(int)</a> - Method in class anydev.<a href="anydev/Column_Integer.ColumnIntegerBuilder.html" title="class in anydev">Column_Integer.ColumnIntegerBuilder</a></dt>
 <dd>
 <div class="block">Sets a maximum allowed value for this column.</div>
 </dd>
+<dt><a href="anydev/Column_Double.ColumnDoubleBuilder.html#withMinValue(double)" class="member-name-link">withMinValue(double)</a> - Method in class anydev.<a href="anydev/Column_Double.ColumnDoubleBuilder.html" title="class in anydev">Column_Double.ColumnDoubleBuilder</a></dt>
+<dd>
+<div class="block">Sets a minimum allowed value for this column.</div>
+</dd>
 <dt><a href="anydev/Column_Integer.ColumnIntegerBuilder.html#withMinValue(int)" class="member-name-link">withMinValue(int)</a> - Method in class anydev.<a href="anydev/Column_Integer.ColumnIntegerBuilder.html" title="class in anydev">Column_Integer.ColumnIntegerBuilder</a></dt>
 <dd>
 <div class="block">Sets a minimum allowed value for this column.</div>
 </dd>
+<dt><a href="anydev/Outputs.html#write()" class="member-name-link">write()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>
+<div class="block">Write selected output tables into selected locations.</div>
+</dd>
 </dl>
 <h2 class="title" id="I:_">_</h2>
 <dl class="index">
-<dt><a href="anydev/DataLoader.html#_connections_commonAnimationSettings_xjal" class="member-name-link">_connections_commonAnimationSettings_xjal</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/StatechartLogger.html#_chart" class="member-name-link">_chart</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_gr_SetupElements" class="member-name-link">_gr_SetupElements</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#_connections_commonAnimationSettings_xjal" class="member-name-link">_connections_commonAnimationSettings_xjal</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_im_Icon" class="member-name-link">_im_Icon</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#_connections_commonAnimationSettings_xjal" class="member-name-link">_connections_commonAnimationSettings_xjal</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_connections_commonAnimationSettings_xjal" class="member-name-link">_connections_commonAnimationSettings_xjal</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_connections_commonAnimationSettings_xjal" class="member-name-link">_connections_commonAnimationSettings_xjal</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_gr_SetupElements" class="member-name-link">_gr_SetupElements</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_gr_SetupElements" class="member-name-link">_gr_SetupElements</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_gr_SetupElements" class="member-name-link">_gr_SetupElements</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_gr_SetupElements" class="member-name-link">_gr_SetupElements</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_im_Icon" class="member-name-link">_im_Icon</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_im_Icon" class="member-name-link">_im_Icon</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_im_Icon" class="member-name-link">_im_Icon</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_image" class="member-name-link">_image</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="anydev/TestLibraryBlock.html#_origin_VA" class="member-name-link">_origin_VA</a> - Variable in class anydev.<a href="anydev/TestLibraryBlock.html" title="class in anydev">TestLibraryBlock</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_p_AutoLoad_DefaultValue_xjal()" class="member-name-link">_p_AutoLoad_DefaultValue_xjal()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#_p_AutoCheckIntegrity_DefaultValue_xjal()" class="member-name-link">_p_AutoCheckIntegrity_DefaultValue_xjal()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>
+<div class="block">Returns default value for parameter <code>p_AutoCheckIntegrity</code>.</div>
+</dd>
+<dt><a href="anydev/DataFactory.html#_p_AutoLoad_DefaultValue_xjal()" class="member-name-link">_p_AutoLoad_DefaultValue_xjal()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>
 <div class="block">Returns default value for parameter <code>p_AutoLoad</code>.</div>
 </dd>
-<dt><a href="anydev/DataLoader.html#_p_Tables_DefaultValue_xjal()" class="member-name-link">_p_Tables_DefaultValue_xjal()</a> - Method in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/StatechartLogger.html#_p_AutoLog_DefaultValue_xjal()" class="member-name-link">_p_AutoLog_DefaultValue_xjal()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>
+<div class="block">Returns default value for parameter <code>p_AutoLog</code>.</div>
+</dd>
+<dt><a href="anydev/Outputs.html#_p_LogActivity_DefaultValue_xjal()" class="member-name-link">_p_LogActivity_DefaultValue_xjal()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>
+<div class="block">Returns default value for parameter <code>p_LogActivity</code>.</div>
+</dd>
+<dt><a href="anydev/Outputs.html#_p_Moment_DefaultValue_xjal()" class="member-name-link">_p_Moment_DefaultValue_xjal()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>
+<div class="block">Returns default value for parameter <code>p_Moment</code>.</div>
+</dd>
+<dt><a href="anydev/StatechartLogger.html#_p_States_DefaultValue_xjal()" class="member-name-link">_p_States_DefaultValue_xjal()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>
+<div class="block">Returns default value for parameter <code>p_States</code>.</div>
+</dd>
+<dt><a href="anydev/DataFactory.html#_p_Tables_DefaultValue_xjal()" class="member-name-link">_p_Tables_DefaultValue_xjal()</a> - Method in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>
 <div class="block">Returns default value for parameter <code>p_Tables</code>.</div>
 </dd>
-<dt><a href="anydev/DataLoader.html#_rec_FrameAgents" class="member-name-link">_rec_FrameAgents</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#_p_Tables_DefaultValue_xjal()" class="member-name-link">_p_Tables_DefaultValue_xjal()</a> - Method in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>
+<div class="block">Returns default value for parameter <code>p_Tables</code>.</div>
+</dd>
+<dt><a href="anydev/Scenario.html#_p_Tables_DefaultValue_xjal()" class="member-name-link">_p_Tables_DefaultValue_xjal()</a> - Method in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>
+<div class="block">Returns default value for parameter <code>p_Tables</code>.</div>
+</dd>
+<dt><a href="anydev/StatechartLogger.html#_p_UsePieChart_DefaultValue_xjal()" class="member-name-link">_p_UsePieChart_DefaultValue_xjal()</a> - Method in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>
+<div class="block">Returns default value for parameter <code>p_UsePieChart</code>.</div>
+</dd>
+<dt><a href="anydev/DataFactory.html#_rec_FrameAgents" class="member-name-link">_rec_FrameAgents</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_rec_FrameFunctions" class="member-name-link">_rec_FrameFunctions</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#_rec_FrameAgents" class="member-name-link">_rec_FrameAgents</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_rec_FrameIcon" class="member-name-link">_rec_FrameIcon</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Scenario.html#_rec_FrameAgents" class="member-name-link">_rec_FrameAgents</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_rec_FrameMain" class="member-name-link">_rec_FrameMain</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/StatechartLogger.html#_rec_FrameAgents" class="member-name-link">_rec_FrameAgents</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_rec_FrameParameters" class="member-name-link">_rec_FrameParameters</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#_rec_FrameFunctions" class="member-name-link">_rec_FrameFunctions</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_rec_FrameVariables" class="member-name-link">_rec_FrameVariables</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#_rec_FrameFunctions" class="member-name-link">_rec_FrameFunctions</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_SHAPE_NEXT_ID_xjal" class="member-name-link">_SHAPE_NEXT_ID_xjal</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Scenario.html#_rec_FrameFunctions" class="member-name-link">_rec_FrameFunctions</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_rec_FrameFunctions" class="member-name-link">_rec_FrameFunctions</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_rec_FrameIcon" class="member-name-link">_rec_FrameIcon</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_rec_FrameIcon" class="member-name-link">_rec_FrameIcon</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_rec_FrameIcon" class="member-name-link">_rec_FrameIcon</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_rec_FrameIcon" class="member-name-link">_rec_FrameIcon</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_rec_FrameMain" class="member-name-link">_rec_FrameMain</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_rec_FrameMain" class="member-name-link">_rec_FrameMain</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_rec_FrameMain" class="member-name-link">_rec_FrameMain</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_rec_FrameMain" class="member-name-link">_rec_FrameMain</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_rec_FrameParameters" class="member-name-link">_rec_FrameParameters</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_rec_FrameParameters" class="member-name-link">_rec_FrameParameters</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_rec_FrameParameters" class="member-name-link">_rec_FrameParameters</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_rec_FrameParameters" class="member-name-link">_rec_FrameParameters</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_rec_FrameVariables" class="member-name-link">_rec_FrameVariables</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_rec_FrameVariables" class="member-name-link">_rec_FrameVariables</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_rec_FrameVariables" class="member-name-link">_rec_FrameVariables</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_rec_FrameVariables" class="member-name-link">_rec_FrameVariables</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_SHAPE_NEXT_ID_xjal" class="member-name-link">_SHAPE_NEXT_ID_xjal</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>
+<div class="block">Internal constant, shouldn't be accessed by user</div>
+</dd>
+<dt><a href="anydev/Outputs.html#_SHAPE_NEXT_ID_xjal" class="member-name-link">_SHAPE_NEXT_ID_xjal</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>
+<div class="block">Internal constant, shouldn't be accessed by user</div>
+</dd>
+<dt><a href="anydev/Scenario.html#_SHAPE_NEXT_ID_xjal" class="member-name-link">_SHAPE_NEXT_ID_xjal</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>
+<div class="block">Internal constant, shouldn't be accessed by user</div>
+</dd>
+<dt><a href="anydev/StatechartLogger.html#_SHAPE_NEXT_ID_xjal" class="member-name-link">_SHAPE_NEXT_ID_xjal</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>
 <div class="block">Internal constant, shouldn't be accessed by user</div>
 </dd>
@@ -1284,7 +2021,19 @@ the order they are declared.</div>
 <dd>
 <div class="block">Internal constant, shouldn't be accessed by user</div>
 </dd>
-<dt><a href="anydev/DataLoader.html#_STATECHART_COUNT_xjal" class="member-name-link">_STATECHART_COUNT_xjal</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#_STATECHART_COUNT_xjal" class="member-name-link">_STATECHART_COUNT_xjal</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>
+<div class="block">Internal constant, shouldn't be accessed by user</div>
+</dd>
+<dt><a href="anydev/Outputs.html#_STATECHART_COUNT_xjal" class="member-name-link">_STATECHART_COUNT_xjal</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>
+<div class="block">Internal constant, shouldn't be accessed by user</div>
+</dd>
+<dt><a href="anydev/Scenario.html#_STATECHART_COUNT_xjal" class="member-name-link">_STATECHART_COUNT_xjal</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>
+<div class="block">Internal constant, shouldn't be accessed by user</div>
+</dd>
+<dt><a href="anydev/StatechartLogger.html#_STATECHART_COUNT_xjal" class="member-name-link">_STATECHART_COUNT_xjal</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>
 <div class="block">Internal constant, shouldn't be accessed by user</div>
 </dd>
@@ -1292,45 +2041,157 @@ the order they are declared.</div>
 <dd>
 <div class="block">Internal constant, shouldn't be accessed by user</div>
 </dd>
-<dt><a href="anydev/DataLoader.html#_text_Autoload" class="member-name-link">_text_Autoload</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#_text_Autoload" class="member-name-link">_text_Autoload</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Autoload_Font" class="member-name-link">_text_Autoload_Font</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#_text_Autoload_Font" class="member-name-link">_text_Autoload_Font</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Description" class="member-name-link">_text_Description</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#_text_AutoSC" class="member-name-link">_text_AutoSC</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Description_Font" class="member-name-link">_text_Description_Font</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#_text_AutoSC_Font" class="member-name-link">_text_AutoSC_Font</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Frame_Heading" class="member-name-link">_text_Frame_Heading</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#_text_Description" class="member-name-link">_text_Description</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Frame_Heading_Font" class="member-name-link">_text_Frame_Heading_Font</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#_text_Description" class="member-name-link">_text_Description</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Title_Agents" class="member-name-link">_text_Title_Agents</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Scenario.html#_text_Description" class="member-name-link">_text_Description</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Title_Agents_Font" class="member-name-link">_text_Title_Agents_Font</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/StatechartLogger.html#_text_Description" class="member-name-link">_text_Description</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Title_Functions" class="member-name-link">_text_Title_Functions</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#_text_Description_Font" class="member-name-link">_text_Description_Font</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Title_Functions_Font" class="member-name-link">_text_Title_Functions_Font</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#_text_Description_Font" class="member-name-link">_text_Description_Font</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Title_Functions1" class="member-name-link">_text_Title_Functions1</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Scenario.html#_text_Description_Font" class="member-name-link">_text_Description_Font</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Title_Functions1_Font" class="member-name-link">_text_Title_Functions1_Font</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/StatechartLogger.html#_text_Description_Font" class="member-name-link">_text_Description_Font</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Title_Functions2" class="member-name-link">_text_Title_Functions2</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#_text_Frame_Heading" class="member-name-link">_text_Frame_Heading</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Title_Functions2_Font" class="member-name-link">_text_Title_Functions2_Font</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#_text_Frame_Heading" class="member-name-link">_text_Frame_Heading</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Title_Icon" class="member-name-link">_text_Title_Icon</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Scenario.html#_text_Frame_Heading" class="member-name-link">_text_Frame_Heading</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Title_Icon_Font" class="member-name-link">_text_Title_Icon_Font</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/StatechartLogger.html#_text_Frame_Heading" class="member-name-link">_text_Frame_Heading</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Title_Parameters" class="member-name-link">_text_Title_Parameters</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/DataFactory.html#_text_Frame_Heading_Font" class="member-name-link">_text_Frame_Heading_Font</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Title_Parameters_Font" class="member-name-link">_text_Title_Parameters_Font</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Outputs.html#_text_Frame_Heading_Font" class="member-name-link">_text_Frame_Heading_Font</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Title_Variables" class="member-name-link">_text_Title_Variables</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/Scenario.html#_text_Frame_Heading_Font" class="member-name-link">_text_Frame_Heading_Font</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="anydev/DataLoader.html#_text_Title_Variables_Font" class="member-name-link">_text_Title_Variables_Font</a> - Static variable in class anydev.<a href="anydev/DataLoader.html" title="class in anydev">DataLoader</a></dt>
+<dt><a href="anydev/StatechartLogger.html#_text_Frame_Heading_Font" class="member-name-link">_text_Frame_Heading_Font</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_text_Title_Agents" class="member-name-link">_text_Title_Agents</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_text_Title_Agents" class="member-name-link">_text_Title_Agents</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_text_Title_Agents" class="member-name-link">_text_Title_Agents</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_text_Title_Agents" class="member-name-link">_text_Title_Agents</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_text_Title_Agents_Font" class="member-name-link">_text_Title_Agents_Font</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_text_Title_Agents_Font" class="member-name-link">_text_Title_Agents_Font</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_text_Title_Agents_Font" class="member-name-link">_text_Title_Agents_Font</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_text_Title_Agents_Font" class="member-name-link">_text_Title_Agents_Font</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_text_Title_Functions" class="member-name-link">_text_Title_Functions</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_text_Title_Functions" class="member-name-link">_text_Title_Functions</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_text_Title_Functions" class="member-name-link">_text_Title_Functions</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_text_Title_Functions" class="member-name-link">_text_Title_Functions</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_text_Title_Functions_Font" class="member-name-link">_text_Title_Functions_Font</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_text_Title_Functions_Font" class="member-name-link">_text_Title_Functions_Font</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_text_Title_Functions_Font" class="member-name-link">_text_Title_Functions_Font</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_text_Title_Functions_Font" class="member-name-link">_text_Title_Functions_Font</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_text_Title_Functions1" class="member-name-link">_text_Title_Functions1</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_text_Title_Functions1" class="member-name-link">_text_Title_Functions1</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_text_Title_Functions1" class="member-name-link">_text_Title_Functions1</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_text_Title_Functions1" class="member-name-link">_text_Title_Functions1</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_text_Title_Functions1_Font" class="member-name-link">_text_Title_Functions1_Font</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_text_Title_Functions1_Font" class="member-name-link">_text_Title_Functions1_Font</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_text_Title_Functions1_Font" class="member-name-link">_text_Title_Functions1_Font</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_text_Title_Functions1_Font" class="member-name-link">_text_Title_Functions1_Font</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_text_Title_Functions2" class="member-name-link">_text_Title_Functions2</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_text_Title_Functions2" class="member-name-link">_text_Title_Functions2</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_text_Title_Functions2" class="member-name-link">_text_Title_Functions2</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_text_Title_Functions2" class="member-name-link">_text_Title_Functions2</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_text_Title_Functions2_Font" class="member-name-link">_text_Title_Functions2_Font</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_text_Title_Functions2_Font" class="member-name-link">_text_Title_Functions2_Font</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_text_Title_Functions2_Font" class="member-name-link">_text_Title_Functions2_Font</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_text_Title_Functions2_Font" class="member-name-link">_text_Title_Functions2_Font</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_text_Title_Icon" class="member-name-link">_text_Title_Icon</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_text_Title_Icon" class="member-name-link">_text_Title_Icon</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_text_Title_Icon" class="member-name-link">_text_Title_Icon</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_text_Title_Icon" class="member-name-link">_text_Title_Icon</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_text_Title_Icon_Font" class="member-name-link">_text_Title_Icon_Font</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_text_Title_Icon_Font" class="member-name-link">_text_Title_Icon_Font</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_text_Title_Icon_Font" class="member-name-link">_text_Title_Icon_Font</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_text_Title_Icon_Font" class="member-name-link">_text_Title_Icon_Font</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_text_Title_Parameters" class="member-name-link">_text_Title_Parameters</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_text_Title_Parameters" class="member-name-link">_text_Title_Parameters</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_text_Title_Parameters" class="member-name-link">_text_Title_Parameters</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_text_Title_Parameters" class="member-name-link">_text_Title_Parameters</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_text_Title_Parameters_Font" class="member-name-link">_text_Title_Parameters_Font</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_text_Title_Parameters_Font" class="member-name-link">_text_Title_Parameters_Font</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_text_Title_Parameters_Font" class="member-name-link">_text_Title_Parameters_Font</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_text_Title_Parameters_Font" class="member-name-link">_text_Title_Parameters_Font</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_text_Title_Variables" class="member-name-link">_text_Title_Variables</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_text_Title_Variables" class="member-name-link">_text_Title_Variables</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_text_Title_Variables" class="member-name-link">_text_Title_Variables</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_text_Title_Variables" class="member-name-link">_text_Title_Variables</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/DataFactory.html#_text_Title_Variables_Font" class="member-name-link">_text_Title_Variables_Font</a> - Static variable in class anydev.<a href="anydev/DataFactory.html" title="class in anydev">DataFactory</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Outputs.html#_text_Title_Variables_Font" class="member-name-link">_text_Title_Variables_Font</a> - Static variable in class anydev.<a href="anydev/Outputs.html" title="class in anydev">Outputs</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/Scenario.html#_text_Title_Variables_Font" class="member-name-link">_text_Title_Variables_Font</a> - Static variable in class anydev.<a href="anydev/Scenario.html" title="class in anydev">Scenario</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="anydev/StatechartLogger.html#_text_Title_Variables_Font" class="member-name-link">_text_Title_Variables_Font</a> - Static variable in class anydev.<a href="anydev/StatechartLogger.html" title="class in anydev">StatechartLogger</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <a href="#I:A">A</a>&nbsp;<a href="#I:B">B</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:K">K</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:W">W</a>&nbsp;<a href="#I:_">_</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">All&nbsp;Packages</a><span class="vertical-separator">|</span><a href="constant-values.html">Constant&nbsp;Field&nbsp;Values</a><span class="vertical-separator">|</span><a href="serialized-form.html">Serialized&nbsp;Form</a></main>

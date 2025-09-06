@@ -104,22 +104,24 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getAsFormattedString(anydev.Logger)" class="member-name-link">getAsFormattedString</a><wbr>(<a href="Logger.html" title="class in anydev">Logger</a>&nbsp;logEntry)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#formatForPopup(anydev.Logger)" class="member-name-link">formatForPopup</a><wbr>(<a href="Logger.html" title="class in anydev">Logger</a>&nbsp;logEntry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Returns a nicely formatted string for a given Logger instance,
- using predefined internal column widths, alignment, and rounding.</div>
+<div class="block">Returns a nicely formatted string for a given Logger instance that prints nicely into a model popup window (i.e.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getHeaderLine()" class="member-name-link">getHeaderLine</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#formatMultiLine(anydev.Logger)" class="member-name-link">formatMultiLine</a><wbr>(<a href="Logger.html" title="class in anydev">Logger</a>&nbsp;logEntry)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Returns a formatted header string for the log event table,
- using predefined internal column widths.</div>
+<div class="block">Returns a nicely formatted string for a given Logger instance printed across several lines (using predefined indentations)
+ Each line defines a specific logger field (time, cause, solution...)</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getSeparatorLine()" class="member-name-link">getSeparatorLine</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#formatSingleLine(anydev.Logger)" class="member-name-link">formatSingleLine</a><wbr>(<a href="Logger.html" title="class in anydev">Logger</a>&nbsp;logEntry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Helper method to generate a separator line based on the total width of the columns.</div>
+<div class="block">Returns a nicely formatted string for a given Logger instance printed across one line only (using predefined indentations)</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getBreakLine()" class="member-name-link">getBreakLine</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -152,39 +154,54 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="getAsFormattedString(anydev.Logger)">
-<h3>getAsFormattedString</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAsFormattedString</span><wbr><span class="parameters">(<a href="Logger.html" title="class in anydev">Logger</a>&nbsp;logEntry)</span></div>
-<div class="block">Returns a nicely formatted string for a given Logger instance,
- using predefined internal column widths, alignment, and rounding.</div>
+<section class="detail" id="formatSingleLine(anydev.Logger)">
+<h3>formatSingleLine</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">formatSingleLine</span><wbr><span class="parameters">(<a href="Logger.html" title="class in anydev">Logger</a>&nbsp;logEntry)</span></div>
+<div class="block">Returns a nicely formatted string for a given Logger instance printed across one line only (using predefined indentations)</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>logEntry</code> - The Logger object representing a single log event.</dd>
+<dd><code>logEntry</code> - The Logger object to be formatted</dd>
 <dt>Returns:</dt>
-<dd>A string representing the formatted log event row.</dd>
+<dd>A string representing the formatted log across several lines</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getHeaderLine()">
-<h3>getHeaderLine</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getHeaderLine</span>()</div>
-<div class="block">Returns a formatted header string for the log event table,
- using predefined internal column widths.</div>
+<section class="detail" id="formatMultiLine(anydev.Logger)">
+<h3>formatMultiLine</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">formatMultiLine</span><wbr><span class="parameters">(<a href="Logger.html" title="class in anydev">Logger</a>&nbsp;logEntry)</span></div>
+<div class="block">Returns a nicely formatted string for a given Logger instance printed across several lines (using predefined indentations)
+ Each line defines a specific logger field (time, cause, solution...)</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>logEntry</code> - The Logger object to be formatted</dd>
 <dt>Returns:</dt>
-<dd>A string representing the formatted header row.</dd>
+<dd>A string representing the formatted log across several lines</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getSeparatorLine()">
-<h3>getSeparatorLine</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getSeparatorLine</span>()</div>
-<div class="block">Helper method to generate a separator line based on the total width of the columns.</div>
+<section class="detail" id="formatForPopup(anydev.Logger)">
+<h3>formatForPopup</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">formatForPopup</span><wbr><span class="parameters">(<a href="Logger.html" title="class in anydev">Logger</a>&nbsp;logEntry)</span></div>
+<div class="block">Returns a nicely formatted string for a given Logger instance that prints nicely into a model popup window (i.e. for thrown exceptions)
+ Returns a header line with the log-level, time, cause type and location ("ERROR at 12.7: DATA_ISSUE in f_LoadData. Details:")
+ Below that is a list of all field details</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>logEntry</code> - The Logger object to be formatted</dd>
+<dt>Returns:</dt>
+<dd>A string representing the formatted log across several lines</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getBreakLine()">
+<h3>getBreakLine</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getBreakLine</span>()</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>A string of hyphens forming a separator line.</dd>
+<dd>A string representing a line full of "_" signs to show a break</dd>
 </dl>
 </section>
 </li>

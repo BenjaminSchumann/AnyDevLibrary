@@ -118,38 +118,56 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createFullRow(java.util.LinkedHashMap,anydev.Table)" class="member-name-link">createFullRow</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedHashMap.html" title="class or interface in java.util" class="external-link">LinkedHashMap</a>&lt;<a href="Column.html" title="class in anydev">Column</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;rowData,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/PreparedStatement.html" title="class or interface in java.sql" class="external-link">PreparedStatement</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addRow(java.sql.PreparedStatement)" class="member-name-link">addRow</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/PreparedStatement.html" title="class or interface in java.sql" class="external-link">PreparedStatement</a>&nbsp;stmt)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Actually add all data from this Row to given PreparedStatement
+ Writes each column cell for this record into the correct stmt column (by 1-based index)</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createFullRow(java.util.LinkedHashMap,anydev.Table)" class="member-name-link">createFullRow</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedHashMap.html" title="class or interface in java.util" class="external-link">LinkedHashMap</a>&lt;<a href="Column.html" title="interface in anydev">Column</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;rowData,
  <a href="Table.html" title="class in anydev">Table</a>&nbsp;table)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Create a fully-formed Row by providing all data upfront
  This bypasses the builder pattern and is useful when you already have all row data in a map.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#get(anydev.Column)" class="member-name-link">get</a><wbr>(<a href="Column.html" title="class in anydev">Column</a>&nbsp;column)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBoolean(anydev.Column)" class="member-name-link">getBoolean</a><wbr>(<a href="Column.html" title="class in anydev">Column</a>&nbsp;column)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#get(anydev.Column)" class="member-name-link">get</a><wbr>(<a href="Column.html" title="interface in anydev">Column</a>&nbsp;column)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedList.html" title="class or interface in java.util" class="external-link">LinkedList</a>&lt;<a href="Column.html" title="class in anydev">Column</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getColumns()" class="member-name-link">getColumns</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBoolean(anydev.Column)" class="member-name-link">getBoolean</a><wbr>(<a href="Column.html" title="interface in anydev">Column</a>&nbsp;column)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedList.html" title="class or interface in java.util" class="external-link">LinkedList</a>&lt;<a href="Column.html" title="interface in anydev">Column</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getColumns()" class="member-name-link">getColumns</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Timestamp.html" title="class or interface in java.sql" class="external-link">Timestamp</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDate(anydev.Column)" class="member-name-link">getDate</a><wbr>(<a href="Column.html" title="interface in anydev">Column</a>&nbsp;column)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDouble(anydev.Column)" class="member-name-link">getDouble</a><wbr>(<a href="Column.html" title="interface in anydev">Column</a>&nbsp;column)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;T&gt;&gt;<br>T</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEnum(anydev.Column)" class="member-name-link">getEnum</a><wbr>(<a href="Column.html" title="interface in anydev">Column</a>&nbsp;column)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInt(anydev.Column)" class="member-name-link">getInt</a><wbr>(<a href="Column.html" title="class in anydev">Column</a>&nbsp;column)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInt(anydev.Column)" class="member-name-link">getInt</a><wbr>(<a href="Column.html" title="interface in anydev">Column</a>&nbsp;column)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getString(anydev.Column)" class="member-name-link">getString</a><wbr>(<a href="Column.html" title="class in anydev">Column</a>&nbsp;column)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getString(anydev.Column)" class="member-name-link">getString</a><wbr>(<a href="Column.html" title="interface in anydev">Column</a>&nbsp;column)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Table.html" title="class in anydev">Table</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTable()" class="member-name-link">getTable</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isNull(anydev.Column)" class="member-name-link">isNull</a><wbr>(<a href="Column.html" title="interface in anydev">Column</a>&nbsp;column)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Row.Builder.html" title="class in anydev">Row.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#with(anydev.Column,java.lang.Object)" class="member-name-link">with</a><wbr>(<a href="Column.html" title="class in anydev">Column</a>&nbsp;column,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Row.Builder.html" title="class in anydev">Row.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#with(anydev.Column,java.lang.Object)" class="member-name-link">with</a><wbr>(<a href="Column.html" title="interface in anydev">Column</a>&nbsp;column,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;dataItem)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Start creating a new Row of data by chaining <code>with(...)</code> for each column</div>
 </div>
 </div>
@@ -172,7 +190,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="with(anydev.Column,java.lang.Object)">
 <h3>with</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Row.Builder.html" title="class in anydev">Row.Builder</a></span>&nbsp;<span class="element-name">with</span><wbr><span class="parameters">(<a href="Column.html" title="class in anydev">Column</a>&nbsp;column,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Row.Builder.html" title="class in anydev">Row.Builder</a></span>&nbsp;<span class="element-name">with</span><wbr><span class="parameters">(<a href="Column.html" title="interface in anydev">Column</a>&nbsp;column,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;dataItem)</span></div>
 <div class="block">Start creating a new Row of data by chaining <code>with(...)</code> for each column</div>
 <dl class="notes">
@@ -185,7 +203,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="createFullRow(java.util.LinkedHashMap,anydev.Table)">
 <h3>createFullRow</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">createFullRow</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedHashMap.html" title="class or interface in java.util" class="external-link">LinkedHashMap</a>&lt;<a href="Column.html" title="class in anydev">Column</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;rowData,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">createFullRow</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedHashMap.html" title="class or interface in java.util" class="external-link">LinkedHashMap</a>&lt;<a href="Column.html" title="interface in anydev">Column</a>,<wbr><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;rowData,
  <a href="Table.html" title="class in anydev">Table</a>&nbsp;table)</span></div>
 <div class="block">Create a fully-formed Row by providing all data upfront
  This bypasses the builder pattern and is useful when you already have all row data in a map.
@@ -194,6 +212,18 @@ loadScripts(document, 'script');</script>
 <dt>Parameters:</dt>
 <dd><code>initialData</code> - The LinkedHashMap containing all column-data pairs for the new Row.</dd>
 <dd><code>table</code> - for which table is this row? Must match structurally (i.e. by columns!). Row will be added to this table</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isNull(anydev.Column)">
+<h3>isNull</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isNull</span><wbr><span class="parameters">(<a href="Column.html" title="interface in anydev">Column</a>&nbsp;column)</span></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>column</code> - the column to check for in this row</dd>
+<dt>Returns:</dt>
+<dd>true if data cell in given column is null, false if not</dd>
 </dl>
 </section>
 </li>
@@ -210,7 +240,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="get(anydev.Column)">
 <h3>get</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="Column.html" title="class in anydev">Column</a>&nbsp;column)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(<a href="Column.html" title="interface in anydev">Column</a>&nbsp;column)</span></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>column</code> - what column to get data for</dd>
@@ -222,10 +252,10 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getString(anydev.Column)">
 <h3>getString</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getString</span><wbr><span class="parameters">(<a href="Column.html" title="class in anydev">Column</a>&nbsp;column)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getString</span><wbr><span class="parameters">(<a href="Column.html" title="interface in anydev">Column</a>&nbsp;column)</span></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>column</code> - what column to get data for. Must be of type Column.Type.STRING</dd>
+<dd><code>column</code> - what column to get data for. Must be a Column_String</dd>
 <dt>Returns:</dt>
 <dd>String stored in this row for given column. Null if none stored for given column, column is not String or actually stored null-String</dd>
 </dl>
@@ -234,10 +264,10 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getBoolean(anydev.Column)">
 <h3>getBoolean</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getBoolean</span><wbr><span class="parameters">(<a href="Column.html" title="class in anydev">Column</a>&nbsp;column)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getBoolean</span><wbr><span class="parameters">(<a href="Column.html" title="interface in anydev">Column</a>&nbsp;column)</span></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>column</code> - what column to get data for. Must be of type Column.Type.BOOLEAN</dd>
+<dd><code>column</code> - what column to get data for. Must be a Column_Boolean</dd>
 <dt>Returns:</dt>
 <dd>Boolean stored in this row for given column. Null if none stored for given column, column is not a boolean or actually stored null</dd>
 </dl>
@@ -246,22 +276,72 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="getInt(anydev.Column)">
 <h3>getInt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getInt</span><wbr><span class="parameters">(<a href="Column.html" title="class in anydev">Column</a>&nbsp;column)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getInt</span><wbr><span class="parameters">(<a href="Column.html" title="interface in anydev">Column</a>&nbsp;column)</span></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>column</code> - what column to get data for. Must be of type Column.Type.INTEGER</dd>
+<dd><code>column</code> - what column to get data for. Must be a Column_Integer</dd>
 <dt>Returns:</dt>
 <dd>Integer stored in this row for given column. Null if none stored for given column, column is not an Integer or actually stored null</dd>
 </dl>
 </section>
 </li>
 <li>
+<section class="detail" id="getDouble(anydev.Column)">
+<h3>getDouble</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name">getDouble</span><wbr><span class="parameters">(<a href="Column.html" title="interface in anydev">Column</a>&nbsp;column)</span></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>column</code> - what column to get data for. Must be a Column_Double</dd>
+<dt>Returns:</dt>
+<dd>Double stored in this row for given column. Null if none stored for given column, column is not a Double or actually stored null</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getEnum(anydev.Column)">
+<h3>getEnum</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;T extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;T&gt;&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">getEnum</span><wbr><span class="parameters">(<a href="Column.html" title="interface in anydev">Column</a>&nbsp;column)</span></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>column</code> - what column to get data for. Must be a Column_Enum</dd>
+<dt>Returns:</dt>
+<dd>Enum entry stored in this row for given column. Null if none stored for given column, column is not an Enum or actually stored null</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getDate(anydev.Column)">
+<h3>getDate</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/Timestamp.html" title="class or interface in java.sql" class="external-link">Timestamp</a></span>&nbsp;<span class="element-name">getDate</span><wbr><span class="parameters">(<a href="Column.html" title="interface in anydev">Column</a>&nbsp;column)</span></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>column</code> - what column to get data for. Must be a Column_Date</dd>
+<dt>Returns:</dt>
+<dd>Timestamp stored in this row for given column. Null if none stored for given column, column is not a Timestamp (=Date) or actually stored null</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getColumns()">
 <h3>getColumns</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedList.html" title="class or interface in java.util" class="external-link">LinkedList</a>&lt;<a href="Column.html" title="class in anydev">Column</a>&gt;</span>&nbsp;<span class="element-name">getColumns</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedList.html" title="class or interface in java.util" class="external-link">LinkedList</a>&lt;<a href="Column.html" title="interface in anydev">Column</a>&gt;</span>&nbsp;<span class="element-name">getColumns</span>()</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>sequential list of columns this row consists of (1st entry is "left-most")</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addRow(java.sql.PreparedStatement)">
+<h3>addRow</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/PreparedStatement.html" title="class or interface in java.sql" class="external-link">PreparedStatement</a></span>&nbsp;<span class="element-name">addRow</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.sql/java/sql/PreparedStatement.html" title="class or interface in java.sql" class="external-link">PreparedStatement</a>&nbsp;stmt)</span></div>
+<div class="block">Actually add all data from this Row to given PreparedStatement
+ Writes each column cell for this record into the correct stmt column (by 1-based index)</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>stmt</code> - the PreparedStatement to add data to</dd>
+<dt>Returns:</dt>
+<dd>given stmt but with data added for this record</dd>
 </dl>
 </section>
 </li>
